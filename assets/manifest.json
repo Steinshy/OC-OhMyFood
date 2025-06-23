@@ -1,0 +1,83 @@
+{
+  "name": "OhMyFood - Restaurants gastronomiques",
+  "short_name": "OhMyFood",
+  "description": "Découvrez et réservez dans les meilleurs restaurants gastronomiques. Composez votre menu et dégustez au restaurant.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9356dc",
+  "orientation": "portrait-primary",
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "favicons/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "La palette du goût",
+      "short_name": "Palette",
+      "description": "Accéder directement au restaurant La palette du goût",
+      "url": "/palette.html",
+      "icons": [
+        {
+          "src": "img/restaurants/palette.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Le délice des sens",
+      "short_name": "Délice",
+      "description": "Accéder directement au restaurant Le délice des sens",
+      "url": "/delice.html",
+      "icons": [
+        {
+          "src": "img/restaurants/delice.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "La note enchantée",
+      "short_name": "Note",
+      "description": "Accéder directement au restaurant La note enchantée",
+      "url": "/note.html",
+      "icons": [
+        {
+          "src": "img/restaurants/note.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "À la française",
+      "short_name": "Française",
+      "description": "Accéder directement au restaurant À la française",
+      "url": "/francaise.html",
+      "icons": [
+        {
+          "src": "img/restaurants/francaise.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
