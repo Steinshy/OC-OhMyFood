@@ -2,30 +2,59 @@
 <html lang="fr">
 
   <head>
+    <!-- Meta Tags & Document Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Le délice des sens - restaurants gastronomique">
-    <title>Le délice des sens - OhMyFood</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="manifest" href="assets/manifest.json">
+    <meta name="description" content="OhMyFood - Restaurants Gastronomique">
+    <meta name="keywords" content="OhMyFood, Restaurants Gastronomique, Menu, Restaurant, Gastronomie">
+    <meta name="author" content="X">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="OhMyFood - Restaurants Gastronomique">
+    <meta property="og:description" content="OhMyFood - Restaurants Gastronomique">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/img/logo/ohmyfood.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
+    <meta name="twitter:description" content="OhMyFood - Restaurants Gastronomique">
+    <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
+
+    <title>OhMyFood - Restaurants Gastronomique</title>
+
+    <!-- Favicon & App Icons -->
     <link rel="icon" href="assets/favicons/favicon.ico">
+    <link rel="manifest" href="assets/manifest.json">
+
+    <!-- Internal Resources & Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
 
   <body>
     <header>
-      <nav class="header-nav">
-        <a class="header-nav__link" href="index.html"></a>
-        <i class="fa-solid fa-arrow-left"></i>
-        <img class="header-nav__logo" src="assets/img/logo/ohmyfood.png" alt="OhMyFood">
+      <nav class="header__nav">
+        <a href="index.html">
+          <img class="header__logo" src="assets/img/logo/ohmyfood.png" alt="OhMyFood">
+        </a>
       </nav>
+      <div class="header__card">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
     </header>
 
     <main>
-      <section class="main-title">
-        <h1 class="main-title__title">Réservez le menu qui vous convient</h1>
-        <p class="main-title__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="cta-button">Explorer nos restaurants</button>
+      <section class="main-section">
+        <h1 class="main__title">Réservez le menu qui vous convient</h1>
+        <p class="main__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button>
+          <h2>Explorer nos restaurants</h2>
+        </button>
       </section>
 
       <section class="presentation">
@@ -54,69 +83,74 @@
         <div class="restaurants-grid">
           <article class="restaurants-card">
             <div class="card-container">
-              <a href="palette.html" aria-labelledby="palette-title"></a>
-              <picture>
-                <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="La palette du goût"
-                  src="assets/img/restaurants/jpg/palette.jpg" loading="lazy" height="150" width="150">
-              </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="palette-title">La palette du goût</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Ménilmontant</p>
-              </div>
+              <a href="palette.html" aria-labelledby="palette-title">
+                <picture>
+                  <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
+                  <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
+                  <img class="card__image restaurants__image" alt="La palette du goût"
+                    src="assets/img/restaurants/jpg/palette.jpg" loading="lazy" height="150" width="150">
+                </picture>
+                <div class="card-content">
+                  <h3 class="card-content__title" id="palette-title">La palette du goût</h3><i
+                    class="fa-solid fa-heart"></i>
+                  <p>Ménilmontant</p>
+                </div>
+              </a>
             </div>
 
           </article>
 
           <article class="restaurants-card">
             <div class="card-container">
-              <a href="note.html" aria-labelledby="note-title"></a>
-              <picture>
-                <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="La note enchantée"
-                  src="assets/img/restaurants/jpg/note.jpg" loading="lazy" height="150" width="150">
-              </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="note-title">La note enchantée</h3><i class="fa-solid fa-heart"></i>
-                <p>Charonne</p>
-              </div>
+              <a href="note.html" aria-labelledby="note-title">
+                <picture>
+                  <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
+                  <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
+                  <img class="card__image restaurants__image" alt="La note enchantée"
+                    src="assets/img/restaurants/jpg/note.jpg" loading="lazy" height="150" width="150">
+                </picture>
+                <div class="card-content">
+                  <h3 class="card-content__title" id="note-title">La note enchantée</h3><i
+                    class="fa-solid fa-heart"></i>
+                  <p>Charonne</p>
+                </div>
+              </a>
             </div>
           </article>
 
           <article class="restaurants-card">
             <div class="card-container">
-              <a href="francaise.html" aria-labelledby="francaise-title"></a>
-              <picture>
-                <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="À la française"
-                  src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy" height="150" width="150">
-              </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="francaise-title">À la française</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Cité Rouge</p>
-              </div>
+              <a href="francaise.html" aria-labelledby="francaise-title">
+                <picture>
+                  <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
+                  <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
+                  <img class="card__image restaurants__image" alt="À la française"
+                    src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy" height="150" width="150">
+                </picture>
+                <div class="card-content">
+                  <h3 class="card-content__title" id="francaise-title">À la française</h3><i
+                    class="fa-solid fa-heart"></i>
+                  <p>Cité Rouge</p>
+                </div>
+              </a>
             </div>
           </article>
 
           <article class="restaurants-card">
             <div class="card-container">
-              <a href="delice.html" aria-labelledby="delice-title"></a>
-              <picture>
-                <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="Le délice des sens"
-                  src="assets/img/restaurants/jpg/delice.jpg" loading="lazy" height="150" width="150">
-              </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="delice-title">Le délice des sens</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Folie-Méricourt</p>
-              </div>
+              <a href="delice.html" aria-labelledby="delice-title">
+                <picture>
+                  <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
+                  <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
+                  <img class="card__image restaurants__image" alt="Le délice des sens"
+                    src="assets/img/restaurants/jpg/delice.jpg" loading="lazy" height="150" width="150">
+                </picture>
+                <div class="card-content">
+                  <h3 class="card-content__title" id="delice-title">Le délice des sens</h3><i
+                    class="fa-solid fa-heart"></i>
+                  <p>Folie-Méricourt</p>
+                </div>
+              </a>
             </div>
           </article>
 

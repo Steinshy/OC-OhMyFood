@@ -1,0 +1,248 @@
+/* ===================================
+    OhMyFood - Restaurant
+    Main Stylesheet
+   =================================== */
+
+/* =========================
+    External Dependencies
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+
+/* =========================
+  Design System & Variables
+========================= */
+:root {
+  --color-primary: #9356dc;
+  --color-secondary: #ff79da;
+  --color-tertiary: #99e2d0;
+  --color-white: #ffffff;
+  --color-text: #000000;
+  --color-border: #d9d9d9;
+
+  /* Typography */
+  --font-family-primary: "Raleway", sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font Sizes */
+  --font-size-xs: 0.5em;
+  --font-size-sm: 0.875em;
+  --font-size-base: 1em;
+  --font-size-lg: 1.25em;
+  --font-size-xl: 1.5em;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-3xl: 3rem;
+
+  /* Layout */
+  --container-max-width: 768px;
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --z-index-base: 1;
+
+  /* Width */
+  --width-full: 100%;
+  --width-half: 50%;
+  --height-full: 100%;
+}
+
+/* =========================
+    CSS Reset & Base Styles
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* =========================
+    Body
+   ========================= */
+body {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  background-color: var(--color-white);
+}
+
+/* =========================
+    Typography & Text Elements
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-size: var(--font-size-base);
+}
+
+/* =========================
+    Interactive Elements
+   ========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  color: var(--color-white);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--space-md);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary) 0%,
+    var(--color-primary) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+button:focus,
+input:focus {
+  outline: none;
+  outline-offset: 2px;
+}
+
+button h2 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+/* =========================
+    Lists & Images
+   ========================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: var(--width-full);
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+    Layout Components
+   ========================= */
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-lg) 0;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.header__nav a {
+  position: relative;
+  z-index: var(--z-index-base);
+}
+
+.header__logo {
+  width: 100%;
+  max-height: 30px;
+}
+
+.header__card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: var(--space-xs) var(--space-md);
+  box-sizing: border-box;
+  background-color: var(--color-border);
+}
+
+.header__card i {
+  margin-right: var(--space-md);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  gap: var(--space-md);
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* =========================
+  Tablet (min-width: 768px)
+   ========================= */
+@media (min-width: 768px) {
+}
+
+/* =========================
+  Desktop (min-width: 1025px)
+   ========================= */
+@media (min-width: 1025px) {
+}
