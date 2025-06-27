@@ -1,6 +1,5 @@
 /* ===================================
-    OhMyFood - Restaurant
-    Main Stylesheet
+    OhMyFood - Restaurant - Main Stylesheet
    =================================== */
 
 /* =========================
@@ -39,17 +38,17 @@
   --space-xl: 2rem;
   --space-3xl: 3rem;
 
+  /* Width */
+  --width-full: 100%;
+  --width-half: 50%;
+  --height-full: 100%;
+
   /* Layout */
   --container-max-width: 768px;
 
   /* Effects */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --z-index-base: 1;
-
-  /* Width */
-  --width-full: 100%;
-  --width-half: 50%;
-  --height-full: 100%;
 }
 
 /* =========================
@@ -69,9 +68,6 @@ html {
   line-height: 1.6;
 }
 
-/* =========================
-    Body
-   ========================= */
 body {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -88,12 +84,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-bold);
   line-height: 1.2;
 }
 
 h1 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
 }
 
 h2 {
@@ -151,17 +146,16 @@ button h2 {
 /* =========================
     Lists & Images
    ========================= */
-
 ul,
 ol {
   list-style: none;
 }
 
 img {
+  display: block;
+  object-fit: cover;
   max-width: var(--width-full);
   height: auto;
-  object-fit: cover;
-  display: block;
 }
 
 /* =========================
@@ -187,8 +181,7 @@ header {
   z-index: var(--z-index-base);
 }
 
-.header__logo {
-  width: 100%;
+.header__nav img {
   max-height: 30px;
 }
 
@@ -225,56 +218,179 @@ main {
   padding: var(--space-md);
 }
 
-.main__title {
+.main-section h1 {
   font-size: var(--font-size-xl);
 }
 
-.main__subtitle {
+.main-section p {
   font-size: var(--font-size-base);
 }
 
-.order-section {
+/* Orders Section */
+.orders-section {
   display: flex;
   flex-direction: column;
-  margin-top: var(--space-3xl);
+  padding: var(--space-lg);
 }
 
-.order-section__title {
-  font-size: var(--font-size-lg);
+/* Orders Section Title */
+.orders-section h1 {
+  margin-bottom: var(--space-md);
 }
 
-.order-step {
+/* Orders Section Container */
+.orders-section__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Order Card */
+.order-card {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
-  padding: var(--space-md);
   border-radius: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  width: 50%;
+  min-height: 70px;
+  gap: var(--space-md);
 }
 
-.order-step__icon {
-  font-size: 20px;
-  color: var(--color-primary);
-  margin-right: var(--space-md);
-}
-
-.order-step__text {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-}
-
-.order-step__circle {
+/* Order Card Circle */
+.order-card__circle {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-content: center;
   justify-content: center;
-  width: var(--space-md);
-  height: var(--space-md);
+  min-width: var(--space-lg);
+  min-height: var(--space-lg);
   border-radius: 50%;
-  background: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary);
+  margin-left: -15px;
+}
+
+/* Order Card Circle Number */
+.order-card__circle span {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+/* Order Card Content */
+.order-card__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-md);
+}
+
+.order-card__content i {
+  color: var(--color-primary);
+}
+
+.order-card__content h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Restaurants Section */
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  background-color: #f6f6f6;
+}
+
+/* Restaurants Section Title */
+.restaurants h1 {
+  margin-bottom: var(--space-md);
+}
+
+/* Restaurants Section Cards */
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Restaurants Card */
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Restaurants Card Image */
+.restaurants__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Restaurants Card Link */
+.restaurants__card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Restaurants Card Content */
+.restaurants__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Restaurants Card Content Title */
+.restaurants__content h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Restaurants Card Content Description */
+.restaurants__content p {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #333333;
+  min-height: 100px;
+  padding: var(--space-md);
+  color: var(--color-white);
+}
+
+/* Footer Content */
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  min-height: 100px;
+  gap: var(--space-md);
+}
+
+.footer__content h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+/* Footer Nav */
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer__nav i {
   margin-right: var(--space-md);
 }
 
