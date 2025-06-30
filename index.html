@@ -28,14 +28,22 @@
     <link rel="icon" href="assets/favicons/favicon.ico">
     <link rel="manifest" href="assets/manifest.json">
 
-    <!-- Internal Resources & Stylesheets -->
+    <!-- Internal Resources -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animation.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
 
   <body>
+    <!-- Loader -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
     <!-- Header -->
     <header>
       <nav class="header__nav">
@@ -103,69 +111,91 @@
         <h1>Restaurants</h1>
         <!-- Restaurants Cards -->
         <div class="restaurants__cards">
+
           <!-- Restaurants Card -->
-          <article class="restaurants__card">
-            <a href="./assets/pages/palette.html" aria-labelledby="palette-title">
+          <article class="restaurant__card">
+            <a href="./assets/restaurants/palette.html" aria-labelledby="palette-title">
+              <span class="restaurant__badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="La palette du goût"
-                  src="assets/img/restaurants/jpg/palette.jpg" loading="lazy" height="150" width="150">
+                <img class="restaurant__image" alt="La palette du goût" src="assets/img/restaurants/jpg/palette.jpg"
+                  loading="lazy">
               </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="palette-title">La palette du goût</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Ménilmontant</p>
+              <div class="restaurant__content">
+                <div class="content__title">
+                  <h2 id="palette-title">La palette du goût</h2>
+                  <p>Ménilmontant</p>
+                </div>
+                <div class="content__heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
               </div>
             </a>
           </article>
 
           <!-- Restaurants Card -->
-          <article class="restaurants__card">
-            <a href="./assets/pages/note.html" aria-labelledby="note-title">
+          <article class="restaurant__card">
+            <a href="./assets/restaurants/note.html" aria-labelledby="note-title">
+              <span class="restaurant__badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="La note enchantée"
-                  src="assets/img/restaurants/jpg/note.jpg" loading="lazy" height="150" width="150">
+                <img class="restaurant__image" alt="La note enchantée" src="assets/img/restaurants/jpg/note.jpg"
+                  loading="lazy">
               </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="note-title">La note enchantée</h3><i class="fa-solid fa-heart"></i>
-                <p>Charonne</p>
+              <div class="restaurant__content">
+                <div class="content__title">
+                  <h2 id="note-title">La note enchantée</h2>
+                  <p>Charonne</p>
+                </div>
+                <div class="content__heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
               </div>
             </a>
           </article>
 
           <!-- Restaurants Card -->
-          <article class="restaurants__card">
-            <a href="./assets/pages/francaise.html" aria-labelledby="francaise-title">
+          <article class="restaurant__card">
+            <a href="./assets/restaurants/francaise.html" aria-labelledby="francaise-title">
+              <span class="restaurant__badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="À la française"
-                  src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy" height="150" width="150">
+                <img class="restaurant__image" alt="À la française" src="assets/img/restaurants/jpg/francaise.jpg"
+                  loading="lazy">
               </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="francaise-title">À la française</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Cité Rouge</p>
+              <div class="restaurant__content">
+                <div class="content__title">
+                  <h2 id="francaise-title">À la française</h2>
+                  <p>Cité Rouge</p>
+                </div>
+                <div class="content__heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
               </div>
             </a>
           </article>
 
           <!-- Restaurants Card -->
-          <article class="restaurants__card">
-            <a href="./assets/pages/delice.html" aria-labelledby="delice-title">
+          <article class="restaurant__card">
+            <a href="./assets/restaurants/delice.html" aria-labelledby="delice-title">
+              <span class="restaurant__badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
-                <img class="card__image restaurants__image" alt="Le délice des sens"
-                  src="assets/img/restaurants/jpg/delice.jpg" loading="lazy" height="150" width="150">
+                <img class="restaurant__image" alt="Le délice des sens" src="assets/img/restaurants/jpg/delice.jpg"
+                  loading="lazy">
               </picture>
-              <div class="card-content">
-                <h3 class="card-content__title" id="delice-title">Le délice des sens</h3><i
-                  class="fa-solid fa-heart"></i>
-                <p>Folie-Méricourt</p>
+              <div class="restaurant__content">
+                <div class="content__title">
+                  <h2 id="delice-title">Le délice des sens</h2>
+                  <p>Folie-Méricourt</p>
+                </div>
+                <div class="content__heart">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
               </div>
             </a>
           </article>

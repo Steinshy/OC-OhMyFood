@@ -17,6 +17,8 @@
   --color-white: #ffffff;
   --color-text: #000000;
   --color-border: #d9d9d9;
+  --color-badge-background: #99e2d0;
+  --color-badge-text: #008766;
 
   /* Typography */
   --font-family-primary: "Raleway", sans-serif;
@@ -30,6 +32,7 @@
   --font-size-base: 1em;
   --font-size-lg: 1.25em;
   --font-size-xl: 1.5em;
+  --font-size-2xl: 2em;
 
   /* Spacing Scale */
   --space-xs: 0.5rem;
@@ -89,6 +92,7 @@ h6 {
 
 h1 {
   font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
 }
 
 h2 {
@@ -105,10 +109,6 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-a:hover {
-  color: var(--color-primary);
 }
 
 button {
@@ -254,7 +254,7 @@ main {
   border-radius: var(--space-md);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-border);
-  width: 50%;
+  width: 100%;
   min-height: 70px;
   gap: var(--space-md);
 }
@@ -294,7 +294,7 @@ main {
 
 .order-card__content h3 {
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Restaurants Section */
@@ -302,11 +302,11 @@ main {
   display: flex;
   flex-direction: column;
   padding: var(--space-lg);
-  background-color: #f6f6f6;
 }
 
 /* Restaurants Section Title */
 .restaurants h1 {
+  font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
 }
 
@@ -318,42 +318,70 @@ main {
 }
 
 /* Restaurants Card */
-.restaurants__card {
+.restaurant__card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  min-height: 250px;
+  width: 100%;
+  position: relative;
+}
+
+.restaurant__badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--color-badge-background);
+  min-width: 80px;
+  min-height: 30px;
+  top: 10px;
+  right: 10px;
 }
 
 /* Restaurants Card Image */
-.restaurants__image {
+.restaurant__image {
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+  max-height: 230px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Restaurants Card Link */
-.restaurants__card a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Restaurants Card Content */
-.restaurants__content {
+.restaurant__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs);
+}
+
+.content__title {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
 }
 
-/* Restaurants Card Content Title */
-.restaurants__content h3 {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
+.content__title h2 {
+  font-weight: var(--font-weight-bold);
 }
 
-/* Restaurants Card Content Description */
-.restaurants__content p {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-normal);
+.content__heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__heart i {
+  font-size: var(--font-size-xl);
+  padding: var(--space-xs);
+  color: var(--color-white);
+  text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
+    1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
+    -1.1px 1.1px 0 #000;
+}
+
+.content__heart i:hover {
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 /* Footer */
