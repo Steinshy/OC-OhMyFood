@@ -173,11 +173,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
   padding: var(--space-md);
 }
 
 .header__nav a {
-  position: relative;
+  position: absolute;
   z-index: var(--z-index-base);
 }
 
@@ -224,6 +225,19 @@ main {
 
 .main-section p {
   font-size: var(--font-size-base);
+}
+
+.main-section__button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.main-section__button a {
+  position: absolute;
+  width: var(--width-full);
+  height: var(--height-full);
+  z-index: var(--z-index-base);
 }
 
 /* Orders Section */
@@ -321,9 +335,20 @@ main {
 .restaurant__card {
   display: flex;
   flex-direction: column;
+  position: relative;
   min-height: 250px;
   width: 100%;
-  position: relative;
+  border-radius: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.restaurant__card a {
+  position: absolute;
+  width: var(--width-full);
+  height: var(--height-full);
+  z-index: var(--z-index-base);
 }
 
 .restaurant__badge {
