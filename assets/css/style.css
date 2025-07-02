@@ -127,7 +127,7 @@ img {
   display: block;
   object-fit: cover;
   max-width: var(--width-full);
-  height: auto;
+  max-height: var(--height-full);
 }
 
 /* =========================
@@ -145,12 +145,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: relative;
   padding: var(--space-md);
 }
 
 .header__nav a {
-  position: absolute;
   z-index: 0;
 }
 
@@ -433,4 +431,28 @@ footer {
   Desktop (min-width: 1025px)
    ========================= */
 @media (min-width: 1025px) {
+}
+
+/* =========================
+  Restaurants Styles
+   ========================= */
+/* Restaurants Delice */
+.delice__main__image {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.delice__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg);
+  border-radius: 40px 40px 0 0;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-primary);
+  position: relative;
+  margin-top: -5rem;
+  background: #f6f6f6;
 }
