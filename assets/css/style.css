@@ -318,7 +318,6 @@ main {
   padding: var(--space-lg);
 }
 
-/* Restaurants Section Title */
 .restaurants h1 {
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
@@ -331,7 +330,7 @@ main {
   gap: var(--space-md);
 }
 
-/* Restaurants Card */
+/* Restaurant Card */
 .restaurant__card {
   display: flex;
   flex-direction: column;
@@ -364,7 +363,7 @@ main {
   right: 10px;
 }
 
-/* Restaurants Card Image */
+/* Restaurant Card Image & Content */
 .restaurant__image {
   border-radius: 14px 14px 0 0;
   overflow: hidden;
@@ -372,7 +371,6 @@ main {
   width: 100%;
 }
 
-/* Restaurants Card Content */
 .restaurant__content {
   display: flex;
   justify-content: space-between;
@@ -430,10 +428,8 @@ footer {
   gap: var(--space-md);
 }
 
-.footer__content h2 {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: var(--space-md);
+.footer__logo {
+  max-height: 30px;
 }
 
 /* Footer Nav */
