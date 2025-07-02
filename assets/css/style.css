@@ -51,7 +51,6 @@
 
   /* Effects */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --z-index-base: 1;
 }
 
 /* =========================
@@ -179,7 +178,7 @@ header {
 
 .header__nav a {
   position: absolute;
-  z-index: var(--z-index-base);
+  z-index: 0;
 }
 
 .header__nav img {
@@ -237,7 +236,7 @@ main {
   position: absolute;
   width: var(--width-full);
   height: var(--height-full);
-  z-index: var(--z-index-base);
+  z-index: 0;
 }
 
 /* Orders Section */
@@ -347,7 +346,7 @@ main {
   position: absolute;
   width: var(--width-full);
   height: var(--height-full);
-  z-index: var(--z-index-base);
+  z-index: 0;
 }
 
 .restaurant__badge {
@@ -389,8 +388,22 @@ main {
 
 .content__heart {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
+}
+
+.content__heart a {
+  position: absolute;
+  width: var(--width-full);
+  height: var(--height-full);
+  z-index: 0;
+}
+
+.content__heart:hover i {
+  transition: color 0.3s, text-shadow 0.3s;
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 .content__heart i {
@@ -400,11 +413,6 @@ main {
   text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
     1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
     -1.1px 1.1px 0 #000;
-}
-
-.content__heart i:hover {
-  color: var(--color-primary);
-  text-shadow: none;
 }
 
 /* Footer */
