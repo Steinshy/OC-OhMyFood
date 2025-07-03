@@ -69,12 +69,15 @@ html {
   font-family: var(--font-family-primary);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
   background-color: var(--color-white);
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -134,13 +137,20 @@ img {
 header {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  padding: 0 var(--space-xl);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 0;
+}
+
+.header__nav img {
+  margin: var(--space-lg) 0;
 }
 
 .header__nav a {
@@ -154,7 +164,9 @@ header {
   justify-content: center;
   min-height: 50px;
   background-color: #eaeaea;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__card i {
@@ -167,6 +179,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Main Section */
@@ -174,7 +188,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--space-md);
   background-color: #f6f6f6;
 }
@@ -187,7 +200,7 @@ main {
     var(--color-secondary) 100%
   );
   color: var(--color-white);
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-md);
   border-radius: var(--space-lg);
   box-shadow: var(--shadow-sm);
 }
@@ -280,6 +293,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: var(--space-lg);
+  background-color: #f6f6f6;
 }
 
 .restaurants h1 {
@@ -331,7 +345,7 @@ main {
 /* Restaurant Card Image & Content */
 .restaurant__image {
   max-height: 230px;
-  width: 100%;
+  width: var(--width-full);
   border-radius: 14px 14px 0 0;
   overflow: hidden;
 }
@@ -340,7 +354,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-xs);
+  padding: var(--space-md);
 }
 
 .content__title {
@@ -375,7 +389,6 @@ main {
 
 .content__heart i {
   font-size: var(--font-size-xl);
-  padding: var(--space-xs);
   color: var(--color-white);
   text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
     1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
@@ -384,22 +397,20 @@ main {
 
 /* Footer */
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  display: grid;
   background-color: #333333;
-  min-height: 100px;
-  padding: var(--space-md);
-  color: var(--color-white);
-  gap: var(--space-md);
+  padding: var(--space-lg);
+}
+
+footer img {
+  margin: var(--space-lg) 0;
 }
 
 /* Footer Nav */
 footer nav {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--space-md);
+  color: var(--color-white);
 }
 
 footer nav i {
