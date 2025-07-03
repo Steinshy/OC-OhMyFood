@@ -1,5 +1,5 @@
 /* ===================================
-    OhMyFood - Restaurant - Main Stylesheet
+    OhMyFood - Main Stylesheet
    =================================== */
 
 /* =========================
@@ -11,6 +11,7 @@
   Design System & Variables
 ========================= */
 :root {
+  /* Colors */
   --color-primary: #9356dc;
   --color-secondary: #ff79da;
   --color-tertiary: #99e2d0;
@@ -110,11 +111,6 @@ a {
   color: inherit;
 }
 
-button h2 {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-}
-
 /* =========================
     Lists & Images
    ========================= */
@@ -145,15 +141,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: var(--space-md);
 }
 
 .header__nav a {
   z-index: 0;
-}
-
-.header__nav img {
-  max-height: 30px;
 }
 
 .header__card {
@@ -184,9 +175,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f6f6f6;
   gap: var(--space-md);
-  padding: var(--space-md);
+  background-color: #f6f6f6;
 }
 
 .main-section__button {
@@ -200,6 +190,11 @@ main {
   padding: var(--space-md) var(--space-lg);
   border-radius: var(--space-lg);
   box-shadow: var(--shadow-sm);
+}
+
+.main-section__button h2 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
 }
 
 .main-section__button:hover {
@@ -310,6 +305,7 @@ main {
   box-shadow: var(--shadow-sm);
   background: var(--color-white);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .restaurant__card a {
@@ -334,10 +330,10 @@ main {
 
 /* Restaurant Card Image & Content */
 .restaurant__image {
-  border-radius: 14px 14px 0 0;
-  overflow: hidden;
   max-height: 230px;
   width: 100%;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
 }
 
 .restaurant__content {
@@ -361,6 +357,7 @@ main {
   position: relative;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .content__heart a {
@@ -395,30 +392,42 @@ footer {
   min-height: 100px;
   padding: var(--space-md);
   color: var(--color-white);
-}
-
-/* Footer Content */
-.footer__content {
-  display: flex;
-  flex-direction: column;
-  padding: var(--space-md);
-  min-height: 100px;
   gap: var(--space-md);
-}
-
-.footer__logo {
-  max-height: 30px;
 }
 
 /* Footer Nav */
-.footer__nav {
+footer nav {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
 
-.footer__nav i {
+footer nav i {
   margin-right: var(--space-md);
+}
+
+/* =========================
+  Restaurants Styles
+   ========================= */
+/* Restaurants Delice */
+.delice__image {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.delice__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: -5rem;
+  padding: var(--space-lg);
+  border-radius: 40px 40px 0 0;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-primary);
+  background: #f6f6f6;
 }
 
 /* =========================
@@ -431,28 +440,4 @@ footer {
   Desktop (min-width: 1025px)
    ========================= */
 @media (min-width: 1025px) {
-}
-
-/* =========================
-  Restaurants Styles
-   ========================= */
-/* Restaurants Delice */
-.delice__main__image {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.delice__card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-lg);
-  border-radius: 40px 40px 0 0;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-primary);
-  position: relative;
-  margin-top: -5rem;
-  background: #f6f6f6;
 }
