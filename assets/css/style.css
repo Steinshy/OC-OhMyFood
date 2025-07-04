@@ -178,7 +178,6 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
   width: 100%;
   overflow-x: hidden;
 }
@@ -203,6 +202,7 @@ main {
   padding: var(--space-md);
   border-radius: var(--space-lg);
   box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-lg);
 }
 
 .main-section__button h2 {
