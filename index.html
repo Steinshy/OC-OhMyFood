@@ -29,12 +29,19 @@
     <title>OhMyFood - Restaurants Gastronomique</title>
 
     <!-- Favicon & App Icons -->
-    <link rel="icon" href="assets/favicons/favicon.ico">
-    <link rel="manifest" href="assets/manifest.json">
+    <link rel="icon" href="./assets/favicons/favicon.ico">
+    <link rel="manifest" href="./assets/manifest.json">
 
     <!-- Internal Resources -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Internal Resources -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/loader.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -50,8 +57,11 @@
 
     <!-- Header -->
     <header>
-      <nav class="header__nav" id="header__nav">
-        <img src="./assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30">
+      <nav class="header__nav">
+        <a href="./index.html">
+          <img src="./assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30"
+            loading="lazy">
+        </a>
       </nav>
     </header>
 
@@ -66,13 +76,12 @@
       <section class="main-section">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a class="main-section__button" href="#goto-restaurants">Explorer nos restaurants</a>
+        <button>Explorer nos restaurants</button>
       </section>
       <!-- Orders Section -->
       <section class="orders-section">
-        <h1>Fonctionnement</h1>
+        <h2>Fonctionnement</h2>
         <div class="orders-section__container">
-
           <!-- Order Card -->
           <div class="order-card">
             <div class="order-card__circle">
@@ -110,10 +119,9 @@
 
       <!-- Restaurants Section -->
       <section class="restaurants" id="goto-restaurants">
-        <h1>Restaurants</h1>
+        <h2>Restaurants</h2>
         <!-- Restaurants Cards -->
         <div class="restaurants__cards">
-
           <!-- Restaurants Card -->
           <article class="restaurant__card">
             <a href="./assets/restaurants/palette.html" aria-labelledby="palette-title"></a>
@@ -126,12 +134,10 @@
             </picture>
             <div class="restaurant__content">
               <div class="content__title">
-                <h2 id="palette-title">La palette du goût</h2>
+                <h3 id="palette-title">La palette du goût</h3>
                 <p>Ménilmontant</p>
               </div>
-              <div class="content__heart">
-                <i class="fa-solid fa-heart"></i>
-              </div>
+              <i class="fa-solid fa-heart custom_heart"></i>
             </div>
           </article>
 
@@ -147,12 +153,10 @@
             </picture>
             <div class="restaurant__content">
               <div class="content__title">
-                <h2 id="note-title">La note enchantée</h2>
+                <h3 id="note-title">La note enchantée</h3>
                 <p>Charonne</p>
               </div>
-              <div class="content__heart">
-                <i class="fa-solid fa-heart"></i>
-              </div>
+              <i class="fa-solid fa-heart custom_heart"></i>
             </div>
           </article>
 
@@ -168,12 +172,10 @@
             </picture>
             <div class="restaurant__content">
               <div class="content__title">
-                <h2 id="francaise-title">À la française</h2>
+                <h3 id="francaise-title">À la française</h3>
                 <p>Cité Rouge</p>
               </div>
-              <div class="content__heart">
-                <i class="fa-solid fa-heart"></i>
-              </div>
+              <i class="fa-solid fa-heart custom_heart"></i>
             </div>
           </article>
 
@@ -189,26 +191,25 @@
             </picture>
             <div class="restaurant__content">
               <div class="content__title">
-                <h2 id="delice-title">Le délice des sens</h2>
+                <h3 id="delice-title">Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
               </div>
-              <div class="content__heart">
-                <i class="fa-solid fa-heart"></i>
-              </div>
+              <i class="fa-solid fa-heart custom_heart"></i>
             </div>
           </article>
         </div>
-
       </section>
     </main>
 
     <footer>
       <img src="./assets/img/logo/ohmyfood-white.png" alt="Logo OhMyFood" height="30">
       <nav>
-        <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a>
-        <a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a>
-        <a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
+          <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
       </nav>
     </footer>
   </body>

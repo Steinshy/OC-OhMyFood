@@ -3,29 +3,28 @@
 
   <head>
     <!-- Meta Tags & Document Information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique." />
     <meta name="keywords"
-      content="OhMyFood, Restaurants Gastronomique, Menu, Restaurant, Gastronomie, Paris, Restaurant Gastronomique, Menu Restaurant">
-    <meta name=" author" content="OpenClassrooms">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
+      content="OhMyFood, Restaurants Gastronomique, Menu, Restaurant, Gastronomie, Paris, Restaurant Gastronomique, Menu Restaurant" />
+    <meta name=" author" content="OpenClassrooms" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="OhMyFood - Restaurants Gastronomique">
+    <meta property="og:title" content="OhMyFood - Restaurants Gastronomique" />
     <meta property="og:description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="../../assets/img/logo/ohmyfood.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="../../assets/img/logo/ohmyfood.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique" />
     <meta name="twitter:description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
-    <meta name="twitter:image" content="../../assets/img/logo/ohmyfood.png">
-
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique." />
+    <meta name="twitter:image" content="../../assets/img/logo/ohmyfood.png" />
 
     <title>OhMyFood - Menu - Le délice des sens</title>
 
@@ -34,10 +33,15 @@
     <link rel="manifest" href="../../assets/manifest.json">
 
     <!-- Internal Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Internal Resources -->
     <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../assets/css/loader.css">
-
-
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -53,114 +57,117 @@
 
     <!-- Header -->
     <header>
-      <nav class="header__nav" id="header__nav">
-        <img src="../../assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30">
+      <nav class="header__nav">
+        <a href="../../index.html">
+          <img src="../../assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30"
+            loading="lazy" />
+        </a>
       </nav>
     </header>
 
-    <main class="delice__main">
-      <div class="delice__image">
-        <picture>
-          <source srcset="../../assets/img/restaurants/webp/delice.webp" type="image/webp">
-          <source srcset="../../assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
-          <img alt="Photo du restaurant Le délice des sens" src="../../assets/img/restaurants/jpg/delice.jpg"
-            loading="lazy">
-        </picture>
-      </div>
-      <section class="delice__card">
-        <h1>Le délice des sens</h1>
-        <i class="fa-solid fa-heart"></i>
-      </section>
+    <main>
+      <picture>
+        <source srcset="../../assets/img/restaurants/webp/delice.webp" type="image/webp" />
+        <source srcset="../../assets/img/restaurants/jpg/delice.jpg" type="image/jpeg" />
+        <img alt="Photo du restaurant Le délice des sens" src="../../assets/img/restaurants/jpg/delice.jpg"
+          loading="lazy" />
+      </picture>
 
-      <section class="menu">
-        <div class="menu__container">
-          <h2 class="menu__title">Notre Menu</h2>
-
-          <div class="menu__section">
-            <h2 class="menu__subtitle">Entrées</h2>
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Tartare de thon</h3>
-              <p class="menu__item-description">Assaisonné au yuzu</p>
-              <p class="menu__item-price">25€</p>
-            </div>
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Bouchée de homard croustillant</h3>
-              <p class="menu__item-description">Et sa farandole de petits légumes</p>
-              <p class="menu__item-price">35€</p>
-            </div>
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Velouté de cèpes</h3>
-              <p class="menu__item-description">Aux truffes</p>
-              <p class="menu__item-price">20€</p>
-            </div>
-          </div>
-
-          <div class="menu__section">
-            <h2 class="menu__subtitle">Plats</h2>
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Poulet rôti aux herbes de Provence</h3>
-              <p class="menu__item-description">Et sa crème de truffe</p>
-              <p class="menu__item-price">40€</p>
-            </div>
-
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Langouste rôtie</h3>
-              <p class="menu__item-description">Et ses légumes de saison</p>
-              <p class="menu__item-price">35€</p>
-            </div>
-
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Côte de bœuf Angus</h3>
-              <p class="menu__item-description">Et sa purée de panais</p>
-              <p class="menu__item-price">44€</p>
-            </div>
-          </div>
-
-          <div class="menu__section">
-            <h2 class="menu__subtitle">Desserts</h2>
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Farandole de desserts</h3>
-              <p class="menu__item-description">Du chef</p>
-              <p class="menu__item-price">18€</p>
-            </div>
-
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Crème brûlée</h3>
-              <p class="menu__item-description">Revisitée</p>
-              <p class="menu__item-price">22€</p>
-            </div>
-
-
-            <div class="menu__item">
-              <h3 class="menu__item-title">Tiramisu</h3>
-              <p class="menu__item-description">À la noisette</p>
-              <p class="menu__item-price">23€</p>
-            </div>
-          </div>
-
-          <button class="cta-button">Commander</button>
+      <section class="menu__header">
+        <div class="menu__header-title">
+          <h1>Le délice des sens</h1>
+          <i class="fa-solid fa-heart custom_heart"></i>
         </div>
+
+        <!-- Menu Sections -->
+        <aside class="menu__section">
+          <div class="menu__title-container">
+            <h2>Entrées</h2>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Tartare de thon</h3>
+            <p class="menu__item-description">Assaisonné au yuzu</p>
+            <p class="menu__item-price">25€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Bouchée de homard croustillant</h3>
+            <p class="menu__item-description">
+              Et sa farandole de petits légumes
+            </p>
+            <p class="menu__item-price">35€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Velouté de cèpes</h3>
+            <p class="menu__item-description">Aux truffes</p>
+            <p class="menu__item-price">20€</p>
+          </div>
+        </aside>
+
+        <aside class="menu__section">
+          <div class="menu__title-container">
+            <h2>Plats</h2>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Poulet rôti aux herbes de Provence</h3>
+            <p class="menu__item-description">Et sa crème de truffe</p>
+            <p class="menu__item-price">40€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Langouste rôtie</h3>
+            <p class="menu__item-description">Et ses légumes de saison</p>
+            <p class="menu__item-price">35€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Côte de bœuf Angus</h3>
+            <p class="menu__item-description">Et sa purée de panais</p>
+            <p class="menu__item-price">44€</p>
+          </div>
+        </aside>
+
+        <aside class="menu__section">
+          <div class="menu__title-container">
+            <h2>Desserts</h2>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Farandole de desserts</h3>
+            <p class="menu__item-description">Du chef</p>
+            <p class="menu__item-price">18€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Crème brûlée</h3>
+            <p class="menu__item-description">Revisitée</p>
+            <p class="menu__item-price">22€</p>
+          </div>
+
+          <div class="menu__item">
+            <h3 class="menu__item-title">Tiramisu</h3>
+            <p class="menu__item-description">À la noisette</p>
+            <p class="menu__item-price">23€</p>
+          </div>
+        </aside>
+        <button class="menu__button">Commander</button>
       </section>
     </main>
 
     <footer>
       <img src="../../assets/img/logo/ohmyfood-white.png" alt="Logo OhMyFood" height="30">
       <nav>
-        <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a>
-        <a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a>
-        <a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a>
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
+          <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
       </nav>
     </footer>
   </body>
-
 
 </html>
