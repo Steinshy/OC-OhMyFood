@@ -131,7 +131,6 @@ img {
   display: block;
   object-fit: cover;
   max-width: var(--width-full);
-  max-height: var(--height-full);
 }
 
 /* =========================
@@ -154,10 +153,6 @@ header {
 
 .header__nav img {
   margin: var(--space-lg) 0;
-}
-
-.header__nav a {
-  z-index: 0;
 }
 
 .header__card {
@@ -183,6 +178,10 @@ main {
   flex-direction: column;
 }
 
+.banner__container {
+  max-height: 300px;
+}
+
 /* Main Section */
 .main-section {
   display: flex;
@@ -190,6 +189,14 @@ main {
   align-items: center;
   gap: var(--space-md);
   background-color: #f6f6f6;
+  padding: var(--space-lg);
+}
+
+.main-section h1,
+.main-section p {
+  width: 100%;
+  max-width: 90vw;
+  text-align: center;
 }
 
 /* Orders Section */
@@ -445,18 +452,12 @@ footer nav i {
 .menu__item-content h3 {
   font-family: var(--font-family-secondary);
   font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .menu__item-content p {
   font-family: var(--font-family-secondary);
   font-weight: 300;
   color: #666;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Menu Item Check - Animation */
