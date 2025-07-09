@@ -14,6 +14,9 @@
   --color-border: #d9d9d9;
   --color-badge: #99e2d0;
   --color-badge-text: #008766;
+  --color-background-dark: #333333;
+  --color-background-light: #f6f6f6;
+  --color-header-card: #eaeaea;
 
   /* Typography */
   --font-family-primary: "Raleway", sans-serif;
@@ -38,15 +41,11 @@
   --space-3xl: 3rem;
 
   /* Width */
-  --width-full: 100%;
-  --width-half: 50%;
-  --height-full: 100%;
+  --size-full: 100%;
+  --size-half: 50%;
 
   /* Layout */
   --container-max-width: 768px;
-
-  /* Effects */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
@@ -69,7 +68,22 @@ html {
 body {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  background-color: var(--color-white);
+}
+
+/* Accessibility Focus */
+a:focus,
+button:focus,
+.restaurant__card a:focus {
+  outline: 5px solid var(--color-primary);
+  outline-offset: -4px;
+}
+
+/* =========================
+    Interactive Elements
+   ========================= */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -84,7 +98,7 @@ button {
   );
   color: var(--color-white);
   border-radius: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: none;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
@@ -93,16 +107,8 @@ button {
 button:hover {
   opacity: 0.8;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  transition: all 0.3s ease;
-}
-
-/* =========================
-    Interactive Elements
-   ========================= */
-a {
-  text-decoration: none;
-  color: inherit;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
 
 .custom_heart {
@@ -111,10 +117,11 @@ a {
   text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
     1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
     -1.1px 1.1px 0 #000;
+  z-index: 2;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .custom_heart:hover {
-  transition: color 0.3s, text-shadow 0.3s;
   color: var(--color-primary);
   text-shadow: none;
 }
@@ -130,7 +137,7 @@ ol {
 img {
   display: block;
   object-fit: cover;
-  max-width: var(--width-full);
+  max-width: var(--size-full);
 }
 
 /* =========================
@@ -161,14 +168,14 @@ header {
   align-items: center;
   justify-content: center;
   min-height: 50px;
-  background-color: #eaeaea;
+  background-color: var(--color-header-card);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  width: 100%;
+  width: var(--size-full);
   box-sizing: border-box;
 }
 
 .header__card i {
-  font-size: 20px;
+  font-size: var(--font-size-lg);
   margin-right: var(--space-md);
 }
 
@@ -188,7 +195,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
-  background-color: #f6f6f6;
+  background-color: var(--color-background-light);
   padding: var(--space-lg);
 }
 
@@ -216,6 +223,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 /* Order Card */
@@ -223,13 +231,15 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #f6f6f6;
+  position: relative;
+  background-color: var(--color-background-light);
   border-radius: var(--space-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-border);
   width: 100%;
   min-height: 70px;
   gap: var(--space-md);
+  padding-left: calc(var(--space-lg) * 1.8);
 }
 
 /* Order Card Circle */
@@ -242,7 +252,10 @@ main {
   min-height: var(--space-lg);
   border-radius: 50%;
   background-color: var(--color-primary);
-  margin-left: -15px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Order Card Circle Number */
@@ -288,6 +301,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 /* Restaurant Card */
@@ -298,7 +312,7 @@ main {
   min-height: 250px;
   width: 100%;
   border-radius: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   background: var(--color-white);
   overflow: hidden;
   cursor: pointer;
@@ -306,9 +320,11 @@ main {
 
 .restaurant__card a {
   position: absolute;
-  width: var(--width-full);
-  height: var(--height-full);
-  z-index: 0;
+  width: var(--size-full);
+  height: var(--size-full);
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .restaurant__badge {
@@ -320,14 +336,13 @@ main {
   background-color: var(--color-badge);
   min-width: 80px;
   min-height: 30px;
-  top: 10px;
-  right: 10px;
+  inset: 10px 10px auto auto;
 }
 
 /* Restaurant Card Image & Content */
 .restaurant__image {
   max-height: 230px;
-  width: var(--width-full);
+  width: var(--size-full);
   border-radius: 14px 14px 0 0;
   overflow: hidden;
 }
@@ -352,7 +367,7 @@ main {
 /* Footer */
 footer {
   display: grid;
-  background-color: #333333;
+  background-color: var(--color-background-dark);
   padding: var(--space-lg);
 }
 
@@ -382,7 +397,7 @@ footer nav i {
   margin-top: -5rem;
   padding: var(--space-lg);
   border-radius: 40px 40px 0 0;
-  background: #f6f6f6;
+  background: var(--color-background-light);
 }
 
 .menu__header-title {
@@ -393,7 +408,11 @@ footer nav i {
 }
 
 .menu__header-title i {
-  font-size: 30px;
+  font-size: var(--font-size-2xl);
+}
+
+.menu__header button {
+  align-self: center;
 }
 
 /* Menu Section */
@@ -401,14 +420,14 @@ footer nav i {
   display: flex;
   flex-direction: column;
   margin-top: var(--space-xl);
-  width: 100%;
+  width: var(--size-full);
   position: relative;
 }
 
 .menu__section-title h2 {
   font-family: var(--font-family-secondary);
   font-weight: 300;
-  line-height: 100%;
+  line-height: var(--size-full);
 }
 
 /* Menu Section Title Line */
@@ -429,12 +448,13 @@ footer nav i {
   margin-top: var(--space-xl);
   background-color: var(--color-white);
   border-radius: var(--space-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-white);
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s;
+  width: var(--size-full);
 }
 
 .menu__item:hover {
@@ -447,6 +467,7 @@ footer nav i {
   flex: 1;
   padding: var(--space-md);
   min-width: 0;
+  transition: transform 0.3s ease;
 }
 
 .menu__item-content h3 {
@@ -479,7 +500,6 @@ footer nav i {
 
 .menu__item:hover .menu__item-content {
   transform: translateX(-5px);
-  transition: transform 0.3s ease;
 }
 
 .menu__item-check i {
@@ -495,11 +515,6 @@ footer nav i {
     transform: rotate(0deg);
     opacity: 1;
   }
-}
-
-/* Menu Button */
-.menu__button {
-  align-self: center;
 }
 
 /* =========================
