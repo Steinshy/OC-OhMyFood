@@ -1,0 +1,182 @@
+/* =========================
+    Loader Styles
+   ========================= */
+
+:root {
+  --loader-bar-x1: 0;
+  --loader-bar-x2: 100%;
+  --loader-bar-y0: -50px;
+  --loader-bar-y1: 50%;
+  --loader-bar-y2: 100%;
+  --loader-bar-y3: -25px;
+  --loader-bar-y4: 0;
+  --loader-bar-y5: 100%;
+  --loader-bar-y6: 0;
+  --loader-bar-y7: 8px;
+  --loader-bar-y8: 16px;
+}
+
+/* Init Hide the main */
+body > :not(.loader-container) {
+  opacity: 0;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+}
+
+/* Hide the loader */
+@keyframes hideLoader {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Fade in the main */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================
+    Loader Bar Background
+   ========================= */
+@keyframes loader-bar-background {
+  0%,
+  100% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y0),
+      var(--loader-bar-x2) var(--loader-bar-y0),
+      var(--loader-bar-x1) var(--loader-bar-y0),
+      var(--loader-bar-x2) var(--loader-bar-y0);
+  }
+  10% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y1),
+      var(--loader-bar-x2) var(--loader-bar-y0),
+      var(--loader-bar-x1) var(--loader-bar-y0),
+      var(--loader-bar-x2) var(--loader-bar-y0);
+  }
+  20% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y3),
+      var(--loader-bar-x1) var(--loader-bar-y0),
+      var(--loader-bar-x2) var(--loader-bar-y0);
+  }
+  30% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y1),
+      var(--loader-bar-x1) var(--loader-bar-y0),
+      var(--loader-bar-x2) var(--loader-bar-y0);
+  }
+  40% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) var(--loader-bar-y4),
+      var(--loader-bar-x2) var(--loader-bar-y0);
+  }
+  50% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y7)),
+      var(--loader-bar-x2) var(--loader-bar-y3);
+  }
+  60% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
+      var(--loader-bar-x2) var(--loader-bar-y6);
+  }
+  70% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
+      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y7));
+  }
+  80% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
+      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y8));
+  }
+  90% {
+    background-position: var(--loader-bar-x1) var(--loader-bar-y1),
+      var(--loader-bar-x2) var(--loader-bar-y2),
+      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y7)),
+      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y8));
+  }
+}
+
+/* =========================
+    Menu Section Animation
+   ========================= */
+.menu__section {
+  animation: slideUpFadeIn 0.5s ease-out both;
+  animation-delay: 1s;
+}
+
+/* =========================
+    Menu Item Animation
+   ========================= */
+.menu__section .menu__item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideUpFadeIn 0.5s ease-out both;
+}
+
+.menu__section .menu__item:nth-child(2) {
+  animation-delay: 1.35s;
+}
+.menu__section .menu__item:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.menu__section .menu__item:nth-child(4) {
+  animation-delay: 1.65s;
+}
+.menu__section .menu__item:nth-child(5) {
+  animation-delay: 1.8s;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+    Menu Item Hover
+   ========================= */
+.menu__item:hover .menu__item-check {
+  transform: translateX(0);
+}
+
+.menu__item:hover .menu__item-content {
+  transform: translateX(-5px);
+}
+
+.menu__item-check i {
+  animation: checkRotate 0.3s ease-in-out;
+}
+
+/* =========================
+    Menu Item Check Rotate
+   ========================= */
+@keyframes checkRotate {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
