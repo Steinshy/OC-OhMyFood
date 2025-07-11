@@ -31,6 +31,8 @@ body > :not(.loader-container) {
   to {
     opacity: 0;
     visibility: hidden;
+    display: none;
+    z-index: 0;
   }
 }
 

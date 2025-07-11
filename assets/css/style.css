@@ -515,10 +515,9 @@ footer nav i {
 
 .menu__item-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
   padding: var(--space-md);
-  min-width: 0;
   transition: transform 0.3s ease;
 }
 
