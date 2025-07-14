@@ -194,6 +194,7 @@ header {
 
 .header__nav {
   display: flex;
+  flex-direction: row;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -201,7 +202,7 @@ header {
 }
 
 .header__nav i {
-  margin-right: auto;
+  margin-left: var(--space-md);
   font-size: var(--font-size-xl);
 }
 
@@ -218,7 +219,6 @@ header {
   background-color: var(--color-header-card);
   box-shadow: var(--box-shadow-medium);
   width: var(--size-full);
-  box-sizing: border-box;
 }
 
 .header__card i {
