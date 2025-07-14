@@ -1,25 +1,23 @@
 /* =========================
     Loader Styles
    ========================= */
-
 :root {
-  --loader-bar-x1: 0;
-  --loader-bar-x2: 100%;
-  --loader-bar-y0: -50px;
-  --loader-bar-y1: 50%;
-  --loader-bar-y2: 100%;
-  --loader-bar-y3: -25px;
-  --loader-bar-y4: 0;
-  --loader-bar-y5: 100%;
-  --loader-bar-y6: 0;
-  --loader-bar-y7: 8px;
-  --loader-bar-y8: 16px;
+  --x0: 0;
+  --x1: 100%;
+  --y0: -50px;
+  --y1: 50%;
+  --y2: -25px;
+  --y3: 8px;
+  --y4: 16px;
 }
 
-/* Init Hide the main */
-body > :not(.loader-container) {
+main {
   opacity: 0;
   animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+}
+
+.loader-container {
+  animation: hideLoader 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
 }
 
 /* Hide the loader */
@@ -53,64 +51,39 @@ body > :not(.loader-container) {
 @keyframes loader-bar-background {
   0%,
   100% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y0),
-      var(--loader-bar-x2) var(--loader-bar-y0),
-      var(--loader-bar-x1) var(--loader-bar-y0),
-      var(--loader-bar-x2) var(--loader-bar-y0);
+    background-position: var(--x0) var(--y0), var(--x1) var(--y0);
   }
-  10% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y1),
-      var(--loader-bar-x2) var(--loader-bar-y0),
-      var(--loader-bar-x1) var(--loader-bar-y0),
-      var(--loader-bar-x2) var(--loader-bar-y0);
-  }
-  20% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y3),
-      var(--loader-bar-x1) var(--loader-bar-y0),
-      var(--loader-bar-x2) var(--loader-bar-y0);
+  15% {
+    background-position: var(--x0) var(--y1), var(--x1) var(--y2);
   }
   30% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y1),
-      var(--loader-bar-x1) var(--loader-bar-y0),
-      var(--loader-bar-x2) var(--loader-bar-y0);
+    background-position: var(--x0) var(--x1), var(--x1) var(--y1);
   }
   40% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) var(--loader-bar-y4),
-      var(--loader-bar-x2) var(--loader-bar-y0);
+    background-position: var(--x0) var(--x1), var(--x1) var(--x1);
   }
   50% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y7)),
-      var(--loader-bar-x2) var(--loader-bar-y3);
+    background-position: var(--x0) var(--x1), var(--x1) var(--x1),
+      var(--x0) calc(var(--x1) - var(--y3));
   }
   60% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
-      var(--loader-bar-x2) var(--loader-bar-y6);
+    background-position: var(--x0) var(--x1), var(--x1) var(--x1),
+      var(--x0) calc(var(--x1) - var(--y4)), var(--x1) var(--x0);
   }
   70% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
-      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y7));
+    background-position: var(--x0) var(--x1), var(--x1) var(--x1),
+      var(--x0) calc(var(--x1) - var(--y4)),
+      var(--x1) calc(var(--x1) - var(--y3));
   }
   80% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y2),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y8)),
-      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y8));
+    background-position: var(--x0) var(--x1), var(--x1) var(--x1),
+      var(--x0) calc(var(--x1) - var(--y4)),
+      var(--x1) calc(var(--x1) - var(--y4));
   }
   90% {
-    background-position: var(--loader-bar-x1) var(--loader-bar-y1),
-      var(--loader-bar-x2) var(--loader-bar-y2),
-      var(--loader-bar-x1) calc(var(--loader-bar-y5) - var(--loader-bar-y7)),
-      var(--loader-bar-x2) calc(var(--loader-bar-y5) - var(--loader-bar-y8));
+    background-position: var(--x0) var(--y1), var(--x1) var(--x1),
+      var(--x0) calc(var(--x1) - var(--y3)),
+      var(--x1) calc(var(--x1) - var(--y4));
   }
 }
 /* =========================

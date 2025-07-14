@@ -19,22 +19,27 @@
   --color-header-card: #eaeaea;
 
   /* Typography */
-  --font-family-primary: "Raleway", sans-serif;
-  --font-family-secondary: "Roboto", sans-serif;
+
+  /* Font Families */
+  --font-family-shrikhand: "Shrikhand", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+
+  /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
   /* Font Sizes */
-  --font-size-xs: 0.5em;
-  --font-size-sm: 0.875em;
-  --font-size-base: 1em;
-  --font-size-lg: 1.25em;
-  --font-size-xl: 1.5em;
-  --font-size-2xl: 2em;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 2rem; /* 32px */
 
   /* Spacing Scale */
   --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
@@ -44,6 +49,10 @@
   --size-full: 100%;
   --size-half: 50%;
 
+  --box-shadow-loader: 0 3px 0 var(--color-white);
+  --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.2);
+
   /* Layout */
   --container-max-width: 768px;
 }
@@ -51,16 +60,14 @@
 /* =========================
     CSS Reset & Base Styles
    ========================= */
-*,
-*::before,
-*::after {
+:where(*, *::before, *::after) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-roboto);
   color: var(--color-text);
   line-height: 1.6;
 }
@@ -83,7 +90,17 @@ body {
   inset: 0;
   background-color: var(--color-white);
   z-index: 9999;
-  animation: hideLoader 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+}
+
+/* =========================
+    Loader
+   ========================= */
+.loader {
+  width: 100px;
+  height: 15px;
+  box-shadow: var(--box-shadow-loader);
+  position: relative;
+  clip-path: inset(-40px 0 -5px);
 }
 
 /* =========================
@@ -98,17 +115,6 @@ body {
   background: var(--g), var(--g), var(--g), var(--g);
   background-size: 16px 14px;
   animation: loader-bar-background 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* =========================
-    Loader
-   ========================= */
-.loader {
-  width: 100px;
-  height: 15px;
-  box-shadow: 0 3px 0 #fff;
-  position: relative;
-  clip-path: inset(-40px 0 -5px);
 }
 
 /* =========================
@@ -131,17 +137,17 @@ button {
   );
   color: var(--color-white);
   border-radius: var(--space-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-light);
   border: none;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
 
 button:hover {
   opacity: 0.8;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  box-shadow: var(--box-shadow-medium);
 }
 
 .custom_heart {
@@ -210,7 +216,7 @@ header {
   justify-content: center;
   min-height: 50px;
   background-color: var(--color-header-card);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow-medium);
   width: var(--size-full);
   box-sizing: border-box;
 }
@@ -275,7 +281,7 @@ main {
   position: relative;
   background-color: var(--color-background-light);
   border-radius: var(--space-md);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-light);
   border: 1px solid var(--color-border);
   width: 100%;
   min-height: 70px;
@@ -329,7 +335,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: var(--space-lg);
-  background-color: #f6f6f6;
+  background-color: var(--color-background-light);
 }
 
 .restaurants h1 {
@@ -353,7 +359,7 @@ main {
   min-height: 250px;
   width: 100%;
   border-radius: var(--space-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-light);
   background: var(--color-white);
   overflow: hidden;
   cursor: pointer;
@@ -449,6 +455,8 @@ footer nav i {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: var(--font-family-shrikhand);
+  font-weight: 400;
 }
 
 .menu__header-title i {
@@ -472,23 +480,21 @@ footer nav i {
 }
 
 /* =========================
-    Menu Section Title Line
+    Menu Section Underline
    ========================= */
 .menu__section-title h2::after {
   content: "";
   position: absolute;
   width: 40px;
   height: 3px;
-  top: 30px;
+  top: 40px;
   left: 0;
   bottom: 0;
   background-color: var(--color-badge);
 }
 
 .menu__section-title h2 {
-  font-family: var(--font-family-secondary);
   font-weight: 300;
-  line-height: var(--size-full);
 }
 
 /* =========================
@@ -500,7 +506,7 @@ footer nav i {
   margin-top: var(--space-xl);
   background-color: var(--color-white);
   border-radius: var(--space-md);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-light);
   border: 1px solid var(--color-white);
   overflow: hidden;
   cursor: pointer;
@@ -510,7 +516,7 @@ footer nav i {
 }
 
 .menu__item:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow-medium);
 }
 
 .menu__item-content {
@@ -536,12 +542,10 @@ footer nav i {
 }
 
 .menu__item-content h3 {
-  font-family: var(--font-family-secondary);
   font-weight: 500;
 }
 
 .menu__item-content p {
-  font-family: var(--font-family-secondary);
   font-weight: 300;
   color: #666;
 }
