@@ -1,25 +1,6 @@
 /* =========================
     Loader Styles
    ========================= */
-:root {
-  --x0: 0;
-  --x1: 100%;
-  --y0: -50px;
-  --y1: 50%;
-  --y2: -25px;
-  --y3: 8px;
-  --y4: 16px;
-}
-
-main {
-  opacity: 0;
-  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
-}
-
-.loader-container {
-  animation: hideLoader 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
-}
-
 /* Hide the loader */
 @keyframes hideLoader {
   0% {
@@ -86,24 +67,10 @@ main {
       var(--x1) calc(var(--x1) - var(--y4));
   }
 }
+
 /* =========================
     Menu Section Animation
    ========================= */
-.menu__section {
-  animation: slideUpFadeIn 0.5s ease-out both;
-  animation-delay: 1s;
-}
-
-/* =========================
-    Menu Item Animation (Refactored)
-   ========================= */
-.menu__section .menu__item {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: slideUpFadeIn 0.5s ease-out both;
-}
-
-/* Staggered animation delay for each item */
 .menu__section .menu__item:nth-child(1) {
   animation-delay: 1.2s;
 }
@@ -137,23 +104,4 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* =========================
-    Menu Item Hover
-   ========================= */
-.menu__item-check {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu__item-check i {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu__item:hover .menu__item-check-container {
-  transform: translateX(0);
-}
-
-.menu__item:hover .menu__item-check i {
-  transform: rotate(360deg);
 }
