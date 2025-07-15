@@ -139,7 +139,7 @@ button {
   border-radius: var(--space-lg);
   box-shadow: var(--box-shadow-light);
   border: none;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
@@ -148,6 +148,24 @@ button:hover {
   opacity: 0.8;
   transform: translateY(-2px);
   box-shadow: var(--box-shadow-medium);
+}
+
+/* =========================
+    Custom Heart
+   ========================= */
+.custom_heart {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
+    1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
+    -1.1px 1.1px 0 #000;
+  z-index: 2;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.custom_heart:hover {
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 /* =========================
@@ -167,8 +185,6 @@ img {
 /* =========================
     Layout Components
    ========================= */
-
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -302,17 +318,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   gap: var(--space-md);
-}
-
-.order-card__content i {
-  color: var(--color-primary);
-}
-
-.order-card__content h3 {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
 }
 
 /* Restaurants Section */
