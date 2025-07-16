@@ -198,28 +198,20 @@ img {
    ========================= */
 header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   position: relative;
   margin: var(--space-lg) 0;
 }
 
-.header__nav {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.header__nav a {
+  position: absolute;
+  left: 2rem;
 }
 
-.header__nav i {
-  margin-inline-start: var(--space-md);
+.header__nav a i {
   font-size: var(--font-size-xl);
-}
-
-.header__nav img {
-  margin: 0 auto;
 }
 
 /* =========================
@@ -409,7 +401,6 @@ header {
 footer {
   display: grid;
   min-height: 130px;
-  gap: 5rem;
   background-color: var(--color-background-dark);
   padding: var(--space-lg);
   align-items: center;
@@ -669,6 +660,7 @@ footer nav i {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
+    gap: 5rem;
   }
 
   footer nav ul {
