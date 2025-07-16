@@ -408,9 +408,18 @@ header {
    ========================= */
 footer {
   display: grid;
+  min-height: 130px;
+  gap: 5rem;
   background-color: var(--color-background-dark);
   padding: var(--space-lg);
-  gap: var(--space-md);
+  align-items: center;
+}
+
+footer span {
+  color: var(--color-white);
+  font-family: var(--font-family-shrikhand);
+  font-weight: 400;
+  font-size: var(--font-size-xl);
 }
 
 footer nav ul {
@@ -658,16 +667,13 @@ footer nav i {
 
   footer {
     display: flex;
-    align-items: center;
     flex-direction: row-reverse;
     justify-content: flex-start;
-    gap: var(--space-md);
   }
 
   footer nav ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--space-md);
+    align-items: center;
   }
 }
