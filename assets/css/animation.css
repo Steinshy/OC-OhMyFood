@@ -29,7 +29,7 @@
 /* =========================
     Loader Bar Background
    ========================= */
-@keyframes loader-bar-background {
+@keyframes loaderBarBackground {
   0%,
   100% {
     background-position: var(--x0) var(--y0), var(--x1) var(--y0);
@@ -53,38 +53,16 @@
   }
   70% {
     background-position: var(--x0) var(--x1), var(--x1) var(--x1),
-      var(--x0) calc(var(--x1) - var(--y4)),
-      var(--x1) calc(var(--x1) - var(--y3));
+      var(--x0) calc(var(--x1) - var(--y4)), var(--x1) calc(var(--x1) - var(--y3));
   }
   80% {
     background-position: var(--x0) var(--x1), var(--x1) var(--x1),
-      var(--x0) calc(var(--x1) - var(--y4)),
-      var(--x1) calc(var(--x1) - var(--y4));
+      var(--x0) calc(var(--x1) - var(--y4)), var(--x1) calc(var(--x1) - var(--y4));
   }
   90% {
     background-position: var(--x0) var(--y1), var(--x1) var(--x1),
-      var(--x0) calc(var(--x1) - var(--y3)),
-      var(--x1) calc(var(--x1) - var(--y4));
+      var(--x0) calc(var(--x1) - var(--y3)), var(--x1) calc(var(--x1) - var(--y4));
   }
-}
-
-/* =========================
-    Menu Section Animation
-   ========================= */
-.menu__section .menu__item:nth-child(1) {
-  animation-delay: 1.2s;
-}
-.menu__section .menu__item:nth-child(2) {
-  animation-delay: 1.35s;
-}
-.menu__section .menu__item:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.menu__section .menu__item:nth-child(4) {
-  animation-delay: 1.65s;
-}
-.menu__section .menu__item:nth-child(5) {
-  animation-delay: 1.8s;
 }
 
 @keyframes slideUpFadeIn {

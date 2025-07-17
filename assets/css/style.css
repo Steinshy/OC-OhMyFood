@@ -10,6 +10,7 @@
   --color-primary: #9356dc;
   --color-secondary: #ff79da;
   --color-white: #ffffff;
+  --color-gray: #cccccc;
   --color-text: #000000;
   --color-border: #d9d9d9;
   --color-badge: #99e2d0;
@@ -19,17 +20,11 @@
   --color-header-card: #eaeaea;
 
   /* Typography */
-
-  /* Font Families */
   --font-family-shrikhand: "Shrikhand", sans-serif;
   --font-family-roboto: "Roboto", sans-serif;
-
-  /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-
-  /* Font Sizes */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -37,7 +32,7 @@
   --font-size-xl: 1.5rem;
   --font-size-2xl: 2rem;
 
-  /* Spacing Scale */
+  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
   --space-md: 1rem;
@@ -45,17 +40,19 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
 
-  /* Width */
+  /* Layout */
   --size-full: 100%;
   --size-half: 50%;
+  --container-max-width: 768px;
 
-  /* Box Shadows */
+  /* Shadows */
   --box-shadow-loader: 0 3px 0 var(--color-white);
   --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.2);
   --box-shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-  /* Layout */
-  --container-max-width: 768px;
+  /* Custom Heart Shadow */
+  --heart-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
+    1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000, -1.1px 1.1px 0 #000;
 
   /* Animation */
   --x0: 0;
@@ -65,6 +62,7 @@
   --y2: -25px;
   --y3: 8px;
   --y4: 16px;
+  --gradient: no-repeat linear-gradient(var(--color-gray) 0, var(--color-gray) 100%);
 }
 
 /* =========================
@@ -82,21 +80,61 @@ html {
   line-height: 1.6;
 }
 
+body {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
 main {
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
 }
 
-body {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
+/* =========================
+    Common Components
+   ========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  margin: var(--space-xl) 0;
+  background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  border-radius: var(--space-lg);
+  box-shadow: var(--box-shadow-light);
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-medium);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  max-width: var(--size-full);
 }
 
 /* =========================
-    Loader
+      Loader
    ========================= */
-.loader-container {
+.loader_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,75 +160,9 @@ body {
   position: absolute;
   inset: auto calc(50% - 17px) 0;
   height: 50px;
-  --g: no-repeat linear-gradient(#ccc 0, #ccc 100%);
-  background: var(--g), var(--g), var(--g), var(--g);
+  background: var(--gradient), var(--gradient), var(--gradient), var(--gradient);
   background-size: 16px 14px;
-  animation: loader-bar-background 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* =========================
-    Interactive Elements
-   ========================= */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  margin: var(--space-xl) 0;
-  background: linear-gradient(
-    0deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 100%
-  );
-  color: var(--color-white);
-  border-radius: var(--space-lg);
-  box-shadow: var(--box-shadow-light);
-  border: none;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-}
-
-button:hover {
-  opacity: 0.8;
-  transform: translateY(-2px);
-  box-shadow: var(--box-shadow-medium);
-}
-
-/* =========================
-    Custom Heart
-   ========================= */
-.custom_heart {
-  font-size: var(--font-size-lg);
-  color: var(--color-white);
-  text-shadow: 1.5px 0 0 #000, -1.5px 0 0 #000, 0 1.5px 0 #000, 0 -1.5px 0 #000,
-    1.1px 1.1px 0 #000, -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000,
-    -1.1px 1.1px 0 #000;
-  z-index: 2;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.custom_heart:hover {
-  color: var(--color-primary);
-  text-shadow: none;
-}
-
-/* =========================
-    Lists & Images
-   ========================= */
-ul,
-ol {
-  list-style: none;
-}
-
-img {
-  display: block;
-  object-fit: cover;
-  max-width: var(--size-full);
+  animation: loaderBarBackground 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =========================
@@ -205,19 +177,19 @@ header {
   margin: var(--space-lg) 0;
 }
 
-.header__nav a {
+.header_nav a {
   position: absolute;
   left: 2rem;
 }
 
-.header__nav a i {
+.header_nav a i {
   font-size: var(--font-size-xl);
 }
 
 /* =========================
-    Banner Location
+    Main - Banner Location
    ========================= */
-.banner_location {
+.main_banner_location {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -228,15 +200,15 @@ header {
   width: var(--size-full);
 }
 
-.banner_location i {
+.main_banner_location i {
   font-size: var(--font-size-lg);
   margin-inline-end: var(--space-md);
 }
 
 /* =========================
-    Main Section
+    Main - Booking Section
    ========================= */
-.main_section {
+.booking_section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,32 +217,31 @@ header {
   padding: var(--space-lg);
 }
 
-.main_section h1,
-.main_section p {
+.booking_section h1,
+.booking_section p {
   width: 100%;
   max-width: 90vw;
   text-align: center;
 }
 
-.section_orders {
+.booking_orders {
   display: grid;
   padding: var(--space-lg);
   width: 100%;
 }
 
-.section_orders h1 {
+.booking_orders h2 {
   margin-block-end: var(--space-md);
 }
 
-/* Orders Section Container */
-.section_orders__container {
+.booking_orders_container {
   display: grid;
   gap: var(--space-md);
   margin-block-start: var(--space-md);
 }
 
 /* Order Card */
-.order-card {
+.booking_order_card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -286,7 +257,7 @@ header {
 }
 
 /* Order Card Circle */
-.order-card__circle {
+.card_circle {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -302,29 +273,25 @@ header {
 }
 
 /* Order Card Circle Number */
-.order-card__circle span {
+.card_circle span {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
 }
 
 /* Order Card Content */
-.order-card__content {
+.card_content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--space-md);
 }
 
-/* Restaurants Section */
+/* =========================
+    Restaurants
+   ========================= */
 .restaurants {
   background-color: var(--color-background-light);
-}
-
-.restaurants__container {
-  display: grid;
-  padding: var(--space-lg);
-  width: 100%;
 }
 
 .restaurants h1 {
@@ -332,16 +299,20 @@ header {
   margin-block-end: var(--space-md);
 }
 
-/* Restaurants Section Cards */
-.restaurants__cards {
+.restaurants_container {
+  display: grid;
+  padding: var(--space-lg);
+  width: 100%;
+}
+
+.restaurants_cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: var(--space-lg);
   margin-block-start: var(--space-md);
 }
 
-/* Restaurant Card */
-.restaurant__card {
+.restaurant_card {
   position: relative;
   min-height: 250px;
   width: 100%;
@@ -352,7 +323,7 @@ header {
   cursor: pointer;
 }
 
-.restaurant__card a {
+.restaurant_card a {
   position: absolute;
   width: var(--size-full);
   height: var(--size-full);
@@ -361,7 +332,7 @@ header {
   top: 0;
 }
 
-.restaurant__badge {
+.restaurant_badge {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -374,15 +345,14 @@ header {
   color: var(--color-badge-text);
 }
 
-/* Restaurant Card Image & Content */
-.restaurant__image {
+.restaurant_image {
   max-height: 230px;
   width: var(--size-full);
   border-radius: 14px 14px 0 0;
   overflow: hidden;
 }
 
-.restaurant__content {
+.restaurant_card_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -390,13 +360,29 @@ header {
   padding: var(--space-md);
 }
 
-.content__title {
+.card_title {
   display: flex;
   flex-direction: column;
 }
 
-.content__title h2 {
+.card_title h3 {
   font-weight: var(--font-weight-bold);
+}
+
+/* =========================
+    Heart Icon
+   ========================= */
+.custom_heart {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  text-shadow: var(--heart-shadow);
+  z-index: 2;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.custom_heart:hover {
+  color: var(--color-primary);
+  text-shadow: none;
 }
 
 /* =========================
@@ -439,14 +425,14 @@ footer nav i {
 /* =========================
     Banner Container
    ========================= */
-.banner__container {
+.main_banner_container {
   max-height: 300px;
 }
 
 /* =========================
-    Menu Header
+    Menu Container
    ========================= */
-.menu__header {
+.menu_container {
   display: flex;
   flex-direction: column;
   margin-block-start: -5rem;
@@ -455,7 +441,11 @@ footer nav i {
   background: var(--color-background-light);
 }
 
-.menu__header-title {
+.menu_container button {
+  align-self: center;
+}
+
+.menu_container_title {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -463,19 +453,15 @@ footer nav i {
   padding: 0 var(--space-sm) 0;
 }
 
-.menu__header-title h1 {
+.menu_container_title h1 {
   font-family: var(--font-family-shrikhand);
   font-weight: 400;
-}
-
-.menu__header button {
-  align-self: center;
 }
 
 /* =========================
     Menu Section
    ========================= */
-.menu__section {
+.menu_sections {
   display: flex;
   flex-direction: column;
   margin-block-start: var(--space-xl);
@@ -485,16 +471,11 @@ footer nav i {
   animation-delay: 1.2s;
 }
 
-.menu__section .menu__item {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: slideUpFadeIn 0.5s ease-out both;
+.menu_sections_title h2 {
+  font-weight: 300;
 }
 
-/* =========================
-    Menu Section Underline
-   ========================= */
-.menu__section-title h2::after {
+.menu_sections_title h2::after {
   content: "";
   position: absolute;
   width: 40px;
@@ -504,15 +485,29 @@ footer nav i {
   inset-block-end: 0;
   background-color: var(--color-badge);
 }
-
-.menu__section-title h2 {
-  font-weight: 300;
+/* =========================
+    Menu Section Animation
+   ========================= */
+.menu_sections .menu_items:nth-child(1) {
+  animation-delay: 1.2s;
+}
+.menu_sections .menu_items:nth-child(2) {
+  animation-delay: 1.35s;
+}
+.menu_sections .menu_items:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.menu_sections .menu_items:nth-child(4) {
+  animation-delay: 1.65s;
+}
+.menu_sections .menu_items:nth-child(5) {
+  animation-delay: 1.8s;
 }
 
 /* =========================
     Menu Item
    ========================= */
-.menu__item {
+.menu_items {
   display: flex;
   align-items: center;
   width: 100%;
@@ -524,30 +519,50 @@ footer nav i {
   position: relative;
   margin-block-start: var(--space-md);
   margin-block-end: var(--space-md);
+  animation: slideUpFadeIn 0.5s ease-out both;
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__item-content {
+.menu_items:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow-medium);
+}
+
+.menu_items:hover .check_container {
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  transform: translateX(0);
+}
+
+.menu_items:hover .menu_item_content {
+  width: 60%;
+}
+
+.menu_items:hover .check_icon i {
+  transform: rotate(360deg);
+}
+
+.menu_item_content {
   min-width: 0;
   padding: var(--space-md);
   width: 80%;
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__item-content-description {
+.content_description {
   display: flex;
   flex-direction: column;
 }
 
-.menu__item-content-description h3,
-.menu__item-content-description span {
+.content_description h3,
+.content_description span {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.menu__item-check-container {
+.check_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,30 +574,12 @@ footer nav i {
   transition: inset-inline-end 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__item:hover {
-  cursor: pointer;
-  box-shadow: var(--box-shadow-medium);
-}
-
-.menu__item:hover .menu__item-check-container {
-  inset-block-start: 0;
-  inset-inline-end: 0;
-  transform: translateX(0);
-}
-
-.menu__item:hover .menu__item-content {
-  width: 60%;
-}
-
-.menu__item-content-price {
+.content_price {
   white-space: nowrap;
   margin-inline-end: var(--space-md);
 }
 
-/* =========================  
-    Menu Item Check
-   ========================= */
-.menu__item-check {
+.check_icon {
   width: 4rem;
   height: 100%;
   display: flex;
@@ -593,7 +590,7 @@ footer nav i {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__item-check i {
+.check_icon i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -603,10 +600,6 @@ footer nav i {
   background-color: var(--color-white);
   color: var(--color-badge);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu__item:hover .menu__item-check i {
-  transform: rotate(360deg);
 }
 
 /* =========================
@@ -621,7 +614,7 @@ footer nav i {
     padding: 0;
   }
 
-  .restaurants__cards {
+  .restaurants_cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -637,29 +630,29 @@ footer nav i {
   /* =========================
     Banner Container
    ========================= */
-  .banner__container img {
+  .main_banner_container img {
     height: 400px;
     width: 100%;
   }
 
-  .menu__header {
+  .menu_container {
     width: 80%;
     margin: 0 auto;
   }
 
-  .section_orders,
-  .restaurants__container {
+  .booking_orders,
+  .restaurants_container {
     max-width: 1920px;
     margin: 0 auto;
   }
 
-  .section_orders__container {
+  .booking_orders_container {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-2xl);
     padding: var(--space-lg);
   }
 
-  .restaurants__cards {
+  .restaurants_cards {
     gap: 5rem;
   }
 
