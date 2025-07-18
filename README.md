@@ -1,88 +1,113 @@
-# OhMyFood 🍽️ – Plateforme de réservation de menus gastronomiques
+# 🍽️ OhMyFood
 
-OhMyFood est une application web qui permet aux clients de composer leur menu en avance et de réduire leur temps d'attente dans les restaurants gastronomiques. Découvrez une sélection de restaurants d'exception et créez votre expérience culinaire sur mesure.
+**OhMyFood** est une application web responsive qui permet aux clients de composer leur menu gastronomique à l’avance et de réduire leur temps d’attente dans les restaurants partenaires.
+
+---
+
+![Aperçu de l'application OhMyFood](./assets/screenshots/ohmyfood_showcase.png)
+
+---
+
+## 🚀 Aperçu rapide
+
+- **4 restaurants parisiens** avec menus interactifs
+- **Animations CSS élégantes** et micro-interactions
+- **100% mobile-first** et accessible
+- **Aucune dépendance JS** : HTML & CSS pur
+
+---
+
+## 🗂️ Dépôt GitHub
+
+- [Branche principale](https://github.com/Steinshy/OC-OhMyFood/tree/main)
+- [Branche de développement](https://github.com/Steinshy/OC-OhMyFood/tree/dev)
+
+---
 
 ## 🏗️ Structure du projet
 
 ```
 OhMyFood/
 ├── assets/
-│   ├── css/
-│   │   └── style.css          # Feuille de style principale
-│   ├── favicons/              # Icônes de l'application
-│   ├── img/                   # Images (logo, restaurants)
-│   │   ├── logo/              # Logos et éléments de marque
-│   │   └── restaurants/       # Images des restaurants
-│   │       ├── jpg/           # Images au format JPEG
-│   │       └── webp/          # Images au format WebP
-│   └── manifest.json          # Manifest PWA
-├── index.html                 # Page d'accueil
-├── palette.html               # Restaurant "La palette du goût"
-├── delice.html                # Restaurant "Le délice des sens"
-├── note.html                  # Restaurant "La note enchantée"
-├── francaise.html             # Restaurant "À la française"
-└── README.md                  # Documentation du projet
+│   ├── css/           # Feuilles de style CSS du projet
+│   │   ├── animation.css     # Animations CSS
+│   │   ├── restaurants.css   # Styles spécifiques aux pages restaurants
+│   │   └── style.css         # Styles généraux du site
+│   ├── favicons/      # Icônes favicon du site
+│   ├── img/           # Images utilisées dans le site
+│   │   ├── logo/          # Logos OhMyFood (png, svg)
+│   │   └── restaurants/   # Images des restaurants
+│   │       ├── jpg/           # Images des restaurants au format JPG
+│   │       └── webp/          # Images des restaurants au format WebP
+│   ├── restaurants/      # Pages HTML individuelles des restaurants
+│   │   ├── delice.html      # Page du restaurant Le Délice des Sens
+│   │   ├── francaise.html   # Page du restaurant La note enchantée
+│   │   ├── note.html        # Page du restaurant La palette du goût
+│   │   └── palette.html     # Page du restaurant La française gourmande
+│   ├── screenshots/      # Captures d'écran du projet
+│   └── manifest.json     # Fichier manifest pour PWA
+├── index.html         # Page d'accueil
+└── README.md          # Documentation
 ```
 
-## 🛠️ Technologies utilisées
+---
 
-- **HTML5** – Balises sémantiques avec méthodologie BEM
-- **CSS3/SASS** – Styles modernes avec animations CSS
-- **Font Awesome 6** – Bibliothèque d'icônes
-- **Progressive Web App** – Manifest et optimisations mobiles
-- **Images WebP** – Format optimisé pour de meilleures performances
+## 🛠️ Technologies
+
+- **HTML5** (sémantique, BEM)
+- **CSS3** (variables, animations, responsive)
+- **Font Awesome 6** (icônes)
+- **WebP/JPEG** (images optimisées)
+- **PWA** (manifest)
+
+---
 
 ## 📱 Responsive Design
 
-| Appareil | Point de rupture | Disposition                                 |
-| -------- | ---------------- | ------------------------------------------- |
-| Mobile   | < 768px          | Colonne unique, navigation simplifiée       |
-| Tablette | 768px–1024px     | Grille adaptée, cartes redimensionnées      |
-| Desktop  | > 1024px         | Mise en page complète, animations élégantes |
+| Appareil | Point de rupture | Disposition           |
+| -------- | ---------------- | --------------------- |
+| Mobile   | < 768px          | Colonne unique        |
+| Tablette | 768px–1024px     | Grille adaptée        |
+| Desktop  | > 1024px         | Mise en page complète |
 
-## ✨ Fonctionnalités
+---
 
-- **Composition de menu en avance** – Réduisez le temps d'attente
-- **Interface responsive** – Optimisée pour tous les appareils
-- **Animations élégantes** – Micro-interactions et transitions fluides
-- **Progressive Web App** – Installation possible sur mobile
-- **Images optimisées** – Format WebP avec fallback JPEG
-- **Lazy loading** – Chargement optimisé des images
+## ✨ Fonctionnalités principales
+
+- **Composition de menu en avance**
+- **Animations et transitions CSS**
+- **Accessibilité renforcée** (ARIA, navigation clavier, contrastes)
+- **Optimisation mobile et images**
+- **Aucune dépendance JavaScript**
+
+---
 
 ## ♿ Accessibilité
 
-- Structure HTML sémantique avec méthodologie BEM
-- Attributs ARIA pour une navigation claire
-- Labels associés aux éléments interactifs (`aria-labelledby`)
+- Structure HTML sémantique
+- Attributs ARIA et labels explicites
+- Navigation clavier complète
 - Indicateurs de focus visibles
-- Navigation complète au clavier
-- Alt text descriptif pour toutes les images
+- Texte alternatif pour toutes les images
 
-## 🌐 Navigateurs supportés
-
-- Chrome (dernière version)
-- Firefox (dernière version)
-- Safari (dernière version)
-- Edge (dernière version)
-- Navigateurs mobiles iOS/Android
+---
 
 ## 🚀 Démarrage rapide
 
-1. Clonez ce dépôt
-2. Ouvrez `index.html` dans votre navigateur
-3. Explorez les 4 restaurants gastronomiques
-4. Aucun outil de build requis – HTML & CSS purs
+1. Clone le dépôt
+2. Ouvre `index.html` dans ton navigateur
+3. Profite de l’expérience OhMyFood !
 
-## 🍽️ Restaurants disponibles
+---
+
+## 🍴 Restaurants disponibles
 
 - **La palette du goût** – Ménilmontant
 - **Le délice des sens** – Folie-Méricourt
 - **La note enchantée** – Charonne
 - **À la française** – Cité Rouge
 
-## 📖 Description du projet
-
-OhMyFood est une jeune startup qui souhaite s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. Les clients pourront composer leur propre menu et réduire leur temps d'attente dans les restaurants.
+---
 
 ## 🔗 Liens utiles
 
@@ -91,18 +116,22 @@ OhMyFood est une jeune startup qui souhaite s'imposer sur le marché de la resta
 - [Fichiers Source](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Images+et+textes+Ohmyfood.zip)
 - [Scénario du projet](https://openclassrooms.com/fr/paths/877/projects/637/704-scenario)
 - [Brief créatif](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+cr%C3%A9atif+site+Ohmyfood.pdf)
-- [Icônes Font Awesome 6.7.2](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css)
+- [Font Awesome 6.7.2](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css)
 - [Validateur W3C](https://validator.w3.org/)
+
+---
 
 ## 🎨 Design System
 
 - **Police principale** : Roboto
 - **Police titre** : Shrikhand
 - **Couleurs** :
-  - Primaire : #9356DC (Violet)
-  - Secondaire : #FF79DA (Rose)
-  - Tertiaire : #99E2D0 (Vert menthe)
+  - Primaire : <span style="color:#9356DC">■ #9356DC</span>
+  - Secondaire : <span style="color:#FF79DA">■ #FF79DA</span>
+  - Tertiaire : <span style="color:#99E2D0">■ #99E2D0</span>
+
+---
 
 ## 📄 Licence
 
-Ce projet est réalisé à des fins pédagogiques dans le cadre du parcours Développeur Web d'OpenClassrooms.
+Projet réalisé à des fins pédagogiques dans le cadre du parcours Développeur Web d’OpenClassrooms.
