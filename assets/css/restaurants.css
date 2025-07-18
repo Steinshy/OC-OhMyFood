@@ -1,0 +1,178 @@
+/* =========================
+    Restaurants Styles
+   ========================= */
+
+/* =========================
+    Banner Container
+   ========================= */
+.main_banner_container {
+  max-height: 300px;
+}
+
+/* =========================
+      Menu Container
+     ========================= */
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  margin-block-start: -5rem;
+  border-radius: 40px 40px 0 0;
+  background-color: var(--color-background-light);
+}
+
+.menu_container button {
+  align-self: center;
+}
+
+.menu_container_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-sm) 0;
+}
+
+.menu_container_title h1 {
+  font-family: var(--font-family-shrikhand);
+  font-weight: 400;
+}
+
+/* =========================
+      Menu Section
+     ========================= */
+.menu_sections {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-block-start: var(--space-xl);
+  width: var(--size-full);
+  animation: slideUpFadeIn 0.5s ease-out both;
+  animation-delay: 1.2s;
+}
+
+.menu_sections_title h2 {
+  font-weight: 300;
+}
+
+.menu_sections_title h2::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  top: 40px;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  background-color: var(--color-badge);
+}
+/* =========================
+      Menu Section Animation
+     ========================= */
+.menu_sections .menu_items:nth-child(1) {
+  animation-delay: 1.2s;
+}
+.menu_sections .menu_items:nth-child(2) {
+  animation-delay: 1.35s;
+}
+.menu_sections .menu_items:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.menu_sections .menu_items:nth-child(4) {
+  animation-delay: 1.65s;
+}
+.menu_sections .menu_items:nth-child(5) {
+  animation-delay: 1.8s;
+}
+
+/* =========================
+      Menu Item
+     ========================= */
+.menu_items {
+  display: flex;
+  align-items: center;
+  width: var(--size-full);
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--box-shadow-light);
+  border-radius: var(--space-md);
+  overflow: hidden;
+  margin-block: var(--space-md);
+  animation: slideUpFadeIn 0.5s ease-out both;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu_items:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow-medium);
+}
+
+.menu_items:hover .check_container {
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.menu_items:hover .menu_item_content {
+  width: 60%;
+}
+
+.menu_items:hover .check_icon i {
+  transform: rotate(360deg);
+}
+
+.menu_item_content {
+  padding: var(--space-md);
+  width: 80%;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content_description {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_description h3,
+.content_description span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.check_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: -4rem;
+  height: var(--size-full);
+  background-color: var(--color-white);
+  transition: inset-inline-end 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content_price {
+  white-space: nowrap;
+  margin-inline-end: var(--space-md);
+}
+
+.check_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-3xl);
+  height: var(--size-full);
+  background-color: var(--color-badge);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check_icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  width: var(--space-lg);
+  height: var(--space-lg);
+  border-radius: var(--size-half);
+  background-color: var(--color-white);
+  color: var(--color-badge);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
