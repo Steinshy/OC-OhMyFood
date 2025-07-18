@@ -17,7 +17,7 @@
   --color-badge-text: #004e3b;
   --color-background-dark: #333333;
   --color-background-light: #f6f6f6;
-  --color-header-card: #eaeaea;
+  --color-banner: #eaeaea;
 
   /* Typography */
   --font-family-shrikhand: "Shrikhand", sans-serif;
@@ -138,8 +138,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: var(--size-full);
+  width: var(--size-full);
   position: fixed;
   inset: 0;
   background-color: var(--color-white);
@@ -195,7 +195,7 @@ header {
   align-items: center;
   justify-content: center;
   min-height: 50px;
-  background-color: var(--color-header-card);
+  background-color: var(--color-banner);
   box-shadow: var(--box-shadow-medium);
   width: var(--size-full);
 }
@@ -241,7 +241,7 @@ header {
 }
 
 /* Order Card */
-.booking_order_card {
+.booking_card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -264,7 +264,7 @@ header {
   justify-content: center;
   min-width: var(--space-lg);
   min-height: var(--space-lg);
-  border-radius: 50%;
+  border-radius: var(--size-half);
   background-color: var(--color-primary);
   position: absolute;
   inset-inline-start: 0;
@@ -438,7 +438,7 @@ footer nav i {
   margin-block-start: -5rem;
   padding: var(--space-lg);
   border-radius: 40px 40px 0 0;
-  background: var(--color-background-light);
+  background-color: var(--color-background-light);
 }
 
 .menu_container button {
