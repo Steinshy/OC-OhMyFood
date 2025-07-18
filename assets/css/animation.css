@@ -1,7 +1,6 @@
 /* =========================
-    Loader Styles
+    Loader Section - Hide Loader
    ========================= */
-/* Hide the loader */
 @keyframes hideLoader {
   0% {
     opacity: 1;
@@ -9,20 +8,8 @@
   }
   100% {
     opacity: 0;
-    z-index: 0;
-    display: none;
     visibility: hidden;
     pointer-events: none;
-  }
-}
-
-/* Fade in the main */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -65,6 +52,21 @@
   }
 }
 
+/* =========================
+    Main Section - Fade In
+   ========================= */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =========================
+    Menu Section - Menu Items Animation
+   ========================= */
 @keyframes slideUpFadeIn {
   0% {
     opacity: 0;
