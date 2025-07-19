@@ -1,7 +1,7 @@
 {
   "name": "OhMyFood - Restaurants gastronomiques",
   "short_name": "OhMyFood",
-  "description": "Découvrez et réservez dans les meilleurs restaurants gastronomiques. Composez votre menu et dégustez au restaurant.",
+  "description": "Découvrez et réservez dans les meilleurs restaurants gastronomiques de Paris. Composez votre menu et dégustez au restaurant.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -12,72 +12,105 @@
   "scope": "/",
   "icons": [
     {
-      "src": "favicons/favicon.ico",
+      "src": "assets/favicons/favicon.ico",
       "sizes": "16x16 32x32 48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "favicons/icon-192.png",
+      "src": "assets/favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "favicons/icon-512.png",
+      "src": "assets/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "categories": ["food", "lifestyle", "entertainment"],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/ohmyfood_showcase.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "OhMyFood Application Showcase"
+    }
+  ],
   "shortcuts": [
     {
       "name": "La palette du goût",
       "short_name": "Palette",
-      "description": "Accéder directement au restaurant La palette du goût",
-      "url": "/palette.html",
+      "description": "Accéder directement au menu du restaurant La palette du goût",
+      "url": "/assets/restaurants/palette.html",
       "icons": [
         {
-          "src": "img/restaurants/palette.jpg",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Le délice des sens",
-      "short_name": "Délice",
-      "description": "Accéder directement au restaurant Le délice des sens",
-      "url": "/delice.html",
-      "icons": [
-        {
-          "src": "img/restaurants/delice.jpg",
-          "sizes": "192x192"
+          "src": "assets/img/restaurants/jpg/palette.jpg",
+          "sizes": "192x192",
+          "type": "image/jpeg"
         }
       ]
     },
     {
       "name": "La note enchantée",
       "short_name": "Note",
-      "description": "Accéder directement au restaurant La note enchantée",
-      "url": "/note.html",
+      "description": "Accéder directement au menu du restaurant La note enchantée",
+      "url": "/assets/restaurants/note.html",
       "icons": [
         {
-          "src": "img/restaurants/note.jpg",
-          "sizes": "192x192"
+          "src": "assets/img/restaurants/jpg/note.jpg",
+          "sizes": "192x192",
+          "type": "image/jpeg"
         }
       ]
     },
     {
       "name": "À la française",
       "short_name": "Française",
-      "description": "Accéder directement au restaurant À la française",
-      "url": "/francaise.html",
+      "description": "Accéder directement au menu du restaurant À la française",
+      "url": "/assets/restaurants/francaise.html",
       "icons": [
         {
-          "src": "img/restaurants/francaise.jpg",
-          "sizes": "192x192"
+          "src": "assets/img/restaurants/jpg/francaise.jpg",
+          "sizes": "192x192",
+          "type": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Le délice des sens",
+      "short_name": "Délice",
+      "description": "Accéder directement au menu du restaurant Le délice des sens",
+      "url": "/assets/restaurants/delice.html",
+      "icons": [
+        {
+          "src": "assets/img/restaurants/jpg/delice.jpg",
+          "sizes": "192x192",
+          "type": "image/jpeg"
         }
       ]
     }
-  ]
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
 }

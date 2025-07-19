@@ -29,7 +29,10 @@
     <title>OhMyFood - Restaurants Gastronomique</title>
 
     <!-- Favicon & App Icons -->
-    <link rel="icon" href="./assets/favicons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
     <link rel="manifest" href="./assets/manifest.json">
 
     <!-- Fonts -->
@@ -58,8 +61,7 @@
     <!-- Header -->
     <header>
       <nav class="header_nav">
-        <img src="./assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30"
-          loading="lazy">
+        <img src="./assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
@@ -76,12 +78,12 @@
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <button>Explorer nos restaurants</button>
       </section>
-      <!-- Orders Section -->
+
+      <!-- Booking Orders -->
       <section class="booking_orders" aria-labelledby="fonctionnement-titre">
         <h2 id="fonctionnement-titre">Fonctionnement</h2>
         <ol class="booking_orders_container">
 
-          <!-- Booking Order Card -->
           <li class="booking_card" aria-label="Étape 1 : Choisissez un restaurant">
             <div class="card_circle">
               <span>1</span>
@@ -92,7 +94,6 @@
             </div>
           </li>
 
-          <!-- Booking Order Card -->
           <li class="booking_card" aria-label="Étape 2 : Composez votre menu">
             <div class="card_circle">
               <span>2</span>
@@ -103,7 +104,6 @@
             </div>
           </li>
 
-          <!-- Booking Order Card -->
           <li class="booking_card" aria-label="Étape 3 : Dégustez au restaurant">
             <div class="card_circle">
               <span>3</span>
@@ -116,13 +116,13 @@
         </ol>
       </section>
 
-      <!-- Restaurants Section -->
+      <!-- Restaurants -->
       <section class="restaurants" id="goto-restaurants">
         <div class="restaurants_container">
           <h2>Restaurants</h2>
-
           <div class="restaurants_cards">
 
+            <!-- Restaurants Card -->
             <article class="restaurant_card" aria-labelledby="palette-title" aria-describedby="palette-info">
               <a class="full-card-link" href="./assets/restaurants/palette.html"></a>
               <span class="restaurant_badge">Nouveau</span>
@@ -130,7 +130,7 @@
                 <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant La palette du goût"
-                  src="assets/img/restaurants/jpg/palette.jpg" loading="lazy">
+                  src="./assets/img/restaurants/jpg/palette.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="palette-info">
                 <div class="card_title">
@@ -149,7 +149,7 @@
                 <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant La note enchantée"
-                  src="assets/img/restaurants/jpg/note.jpg" loading="lazy">
+                  src="./assets/img/restaurants/jpg/note.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="note-info">
                 <div class="card_title">
@@ -167,7 +167,7 @@
                 <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant À la française"
-                  src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy">
+                  src="./assets/img/restaurants/jpg/francaise.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="francaise-info">
                 <div class="card_title">
@@ -185,7 +185,7 @@
                 <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant Le délice des sens"
-                  src="assets/img/restaurants/jpg/delice.jpg" loading="lazy">
+                  src="./assets/img/restaurants/jpg/delice.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="delice-info">
                 <div class="card_title">

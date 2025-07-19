@@ -2,6 +2,8 @@
 <html lang="fr">
 
   <head>
+    <base href="../../">
+
     <!-- Meta Tags & Document Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +21,21 @@
       content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:image" content="../../assets/img/logo/ohmyfood.png">
+    <meta property="og:image" content="assets/img/logo/ohmyfood.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
     <meta name="twitter:description"
       content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
-    <meta name="twitter:image" content="../../assets/img/logo/ohmyfood.png">
+    <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
 
     <title>OhMyFood - Menu - À la française</title>
 
     <!-- Favicon & App Icons -->
-    <link rel="icon" href="../../assets/favicons/favicon.ico">
-    <link rel="manifest" href="../../assets/manifest.json">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="assets/manifest.json">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,9 +45,9 @@
       rel="stylesheet">
 
     <!-- Internal Resources -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/restaurants.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/animation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/restaurants.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animation.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -59,24 +64,24 @@
     <!-- Header -->
     <header>
       <nav class="header_nav">
-        <a href="../../index.html" aria-label="Retour à l'accueil">
+        <a href="index.html" aria-label="Retour à l'accueil">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
-        <img src="../../assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30"
-          loading="lazy">
+        <img src="assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
     <main>
+      <!-- Banner Container -->
       <div class="main_banner_container" role="region" aria-label="Image du restaurant">
         <picture>
-          <source srcset="../../assets/img/restaurants/webp/francaise.webp" type="image/webp">
-          <source srcset="../../assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
-          <img alt="Photo du restaurant À la française" src="../../assets/img/restaurants/jpg/francaise.jpg"
-            loading="lazy">
+          <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
+          <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
+          <img alt="Photo du restaurant À la française" src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy">
         </picture>
       </div>
 
+      <!-- Menu Container -->
       <section class="menu_container" aria-labelledby="restaurant-title">
         <div class="menu_container_title">
           <h1 id="restaurant-title">À la française</h1>
