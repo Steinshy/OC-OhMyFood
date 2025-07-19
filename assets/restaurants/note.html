@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
     <meta name="twitter:description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnés par nos soins et vivez une expérience culinaire unique.">
     <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
 
     <title>OhMyFood - Menu - La note enchantée</title>
@@ -59,18 +59,18 @@
     </div>
 
     <!-- Header -->
-    <header>
-      <nav class="header_nav">
-        <a href="index.html" aria-label="Retour à l'accueil">
+    <header role="banner">
+      <nav class="header_nav" role="navigation" aria-label="Navigation du restaurant">
+        <a href="index.html" aria-label="Retour à la page d'accueil">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
         <img src="assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
       <!-- Banner Container -->
-      <div class="main_banner_container" role="region" aria-label="Image du restaurant">
+      <div class="main_banner_container" role="img" aria-label="Photo du restaurant La note enchantée">
         <picture>
           <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
           <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
@@ -272,19 +272,40 @@
             </div>
           </article>
         </section>
-        <button>Commander</button>
+        <button type="button" aria-describedby="order-description" aria-label="Commander les plats sélectionnés">
+          Commander
+        </button>
       </section>
     </main>
 
-    <footer>
-      <span>OhMyFood</span>
-      <nav>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
-          <li><a href="#"><i class="fa-solid fa-handshake" aria-hidden="true"></i>Devenir partenaire</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-contract" aria-hidden="true"></i>Mentions légales</a></li>
+    <footer role="contentinfo">
+      <span aria-label="Logo OhMyFood">OhMyFood</span>
+      <nav role="navigation" aria-label="Liens utiles">
+        <ul role="list">
+          <li role="listitem">
+            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#">
+              <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+              Mentions légales
+            </a>
+          </li>
           <address>
-            <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a>
+            <li role="listitem">
+              <a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                Contact
+              </a>
             </li>
           </address>
         </ul>

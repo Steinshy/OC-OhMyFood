@@ -12,42 +12,40 @@
   "scope": "/",
   "icons": [
     {
-      "src": "assets/favicons/favicon.ico",
+      "src": "./assets/favicons/favicon.ico",
       "sizes": "16x16 32x32 48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "assets/favicons/favicon-16x16.png",
+      "src": "./assets/favicons/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "assets/favicons/favicon-32x32.png",
+      "src": "./assets/favicons/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "assets/favicons/apple-touch-icon.png",
+      "src": "./assets/favicons/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "assets/favicons/android-chrome-192x192.png",
+      "src": "./assets/favicons/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "assets/favicons/android-chrome-512x512.png",
+      "src": "./assets/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ],
   "categories": ["food", "lifestyle", "entertainment"],
   "screenshots": [
     {
-      "src": "assets/screenshots/ohmyfood_showcase.png",
+      "src": "./assets/screenshots/ohmyfood_showcase.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
@@ -59,7 +57,7 @@
       "name": "La palette du goût",
       "short_name": "Palette",
       "description": "Accéder directement au menu du restaurant La palette du goût",
-      "url": "/assets/restaurants/palette.html",
+      "url": "./assets/restaurants/palette.html",
       "icons": [
         {
           "src": "assets/img/restaurants/jpg/palette.jpg",
@@ -72,7 +70,7 @@
       "name": "La note enchantée",
       "short_name": "Note",
       "description": "Accéder directement au menu du restaurant La note enchantée",
-      "url": "/assets/restaurants/note.html",
+      "url": "./assets/restaurants/note.html",
       "icons": [
         {
           "src": "assets/img/restaurants/jpg/note.jpg",
@@ -85,7 +83,7 @@
       "name": "À la française",
       "short_name": "Française",
       "description": "Accéder directement au menu du restaurant À la française",
-      "url": "/assets/restaurants/francaise.html",
+      "url": "./assets/restaurants/francaise.html",
       "icons": [
         {
           "src": "assets/img/restaurants/jpg/francaise.jpg",
@@ -98,7 +96,7 @@
       "name": "Le délice des sens",
       "short_name": "Délice",
       "description": "Accéder directement au menu du restaurant Le délice des sens",
-      "url": "/assets/restaurants/delice.html",
+      "url": "./assets/restaurants/delice.html",
       "icons": [
         {
           "src": "assets/img/restaurants/jpg/delice.jpg",

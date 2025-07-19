@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
     <meta name="twitter:description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnés par nos soins et vivez une expérience culinaire unique.">
     <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
 
     <title>OhMyFood - Menu - Le délice des sens</title>
@@ -57,23 +57,24 @@
 
   <body>
     <!-- Loader -->
-    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours">
+    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours"
+      aria-describedby="loading-text">
       <div class="loader" aria-hidden="true"></div>
     </div>
 
     <!-- Header -->
-    <header>
-      <nav class="header_nav">
-        <a href="index.html" aria-label="Retour à l'accueil">
+    <header role="banner">
+      <nav class="header_nav" role="navigation" aria-label="Navigation du restaurant">
+        <a href="index.html" aria-label="Retour à la page d'accueil">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
         <img src="assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
       <!-- Banner Container -->
-      <div class="main_banner_container" role="region" aria-label="Image du restaurant">
+      <div class="main_banner_container" role="img" aria-label="Photo du restaurant Le délice des sens">
         <picture>
           <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
           <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
@@ -82,14 +83,15 @@
       </div>
 
       <!-- Menu Container -->
-      <section class="menu_container" aria-labelledby="restaurant-title">
+      <section class="menu_container" role="region" aria-labelledby="restaurant-title"
+        aria-describedby="restaurant-info">
         <div class="menu_container_title">
           <h1 id="restaurant-title">Le délice des sens</h1>
           <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
         </div>
 
         <!-- Menu Sections -->
-        <section class="menu_sections" aria-labelledby="entrees-title">
+        <section class="menu_sections" role="region" aria-labelledby="entrees-title">
           <div class="menu_sections_title">
             <h2 id="entrees-title">Entrées</h2>
           </div>
@@ -147,7 +149,7 @@
           </article>
         </section>
 
-        <section class="menu_sections" aria-labelledby="plats-title">
+        <section class="menu_sections" role="region" aria-labelledby="plats-title">
           <div class="menu_sections_title">
             <h2 id="plats-title">Plats</h2>
           </div>
@@ -186,7 +188,8 @@
             </div>
           </article>
 
-          <article class="menu_items" aria-labelledby="item-6-title" aria-describedby="item-6-desc">
+          <article class="menu_items" role="button" tabindex="0" aria-labelledby="item-6-title"
+            aria-describedby="item-6-desc item-6-price" aria-pressed="false">
             <div class="menu_item_content">
               <div class="content_description">
                 <h3 id="item-6-title">Côte de bœuf Angus</h3>
@@ -195,16 +198,16 @@
             </div>
             <div class="check_container">
               <div class="content_price">
-                <span>44€</span>
+                <span id="item-6-price" aria-label="Prix : 44 euros">44€</span>
               </div>
-              <div class="check_icon">
+              <div class="check_icon" aria-label="Sélectionné" role="status">
                 <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
         </section>
 
-        <section class="menu_sections" aria-labelledby="desserts-title">
+        <section class="menu_sections" role="region" aria-labelledby="desserts-title">
           <div class="menu_sections_title">
             <h2 id="desserts-title">Desserts</h2>
           </div>
@@ -260,19 +263,41 @@
             </div>
           </article>
         </section>
-        <button>Commander</button>
+
+        <button type="button" aria-describedby="order-description" aria-label="Commander les plats sélectionnés">
+          Commander
+        </button>
       </section>
     </main>
 
-    <footer>
-      <span>OhMyFood</span>
-      <nav>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
-          <li><a href="#"><i class="fa-solid fa-handshake" aria-hidden="true"></i>Devenir partenaire</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-contract" aria-hidden="true"></i>Mentions légales</a></li>
+    <footer role="contentinfo">
+      <span aria-label="Logo OhMyFood">OhMyFood</span>
+      <nav role="navigation" aria-label="Liens utiles">
+        <ul role="list">
+          <li role="listitem">
+            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li role="listitem">
+            <a href="#">
+              <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+              Mentions légales
+            </a>
+          </li>
           <address>
-            <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a>
+            <li role="listitem">
+              <a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                Contact
+              </a>
             </li>
           </address>
         </ul>

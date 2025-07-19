@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
     <meta name="twitter:description"
-      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
+      content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnés par nos soins et vivez une expérience culinaire unique.">
     <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
 
     <title>OhMyFood - Restaurants Gastronomique</title>
@@ -59,15 +59,16 @@
     </div>
 
     <!-- Header -->
-    <header>
-      <nav class="header_nav">
+    <header role="banner">
+      <nav class="header_nav" role="navigation" aria-label="Navigation principale">
         <img src="./assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
       <!-- Banner Location -->
-      <div class="main_banner_location" role="region" aria-label="Position actuelle">
+      <div class="main_banner_location" role="region" aria-label="Localisation actuelle"
+        aria-describedby="location-description">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         <p>Paris, Belleville</p>
       </div>
@@ -76,20 +77,22 @@
       <section class="booking_section">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button>Explorer nos restaurants</button>
+        <button aria-describedby="booking-description" aria-label="Explorer nos restaurants disponibles">
+          Explorer nos restaurants
+        </button>
       </section>
 
       <!-- Booking Orders -->
       <section class="booking_orders" aria-labelledby="fonctionnement-titre">
         <h2 id="fonctionnement-titre">Fonctionnement</h2>
-        <ol class="booking_orders_container">
+        <ol class="booking_orders_container" role="list" aria-label="Étapes pour commander">
 
           <li class="booking_card" aria-label="Étape 1 : Choisissez un restaurant">
             <div class="card_circle">
               <span>1</span>
             </div>
             <div class="card_content">
-              <i class="fa-solid fa-mobile-screen-button"></i>
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
               <h3>Choisissez un restaurant</h3>
             </div>
           </li>
@@ -99,7 +102,7 @@
               <span>2</span>
             </div>
             <div class="card_content">
-              <i class="fa-solid fa-list-check"></i>
+              <i class="fa-solid fa-list-check" aria-hidden="true"></i>
               <h3>Composez votre menu</h3>
             </div>
           </li>
@@ -109,7 +112,7 @@
               <span>3</span>
             </div>
             <div class="card_content">
-              <i class="fa-solid fa-store"></i>
+              <i class="fa-solid fa-store" aria-hidden="true"></i>
               <h3>Dégustez au restaurant</h3>
             </div>
           </li>
@@ -117,15 +120,17 @@
       </section>
 
       <!-- Restaurants -->
-      <section class="restaurants" id="goto-restaurants">
+      <section class="restaurants" id="goto-restaurants" role="region" aria-labelledby="restaurants-heading">
         <div class="restaurants_container">
-          <h2>Restaurants</h2>
+          <h2 id="restaurants-heading">Restaurants</h2>
           <div class="restaurants_cards">
 
             <!-- Restaurants Card -->
-            <article class="restaurant_card" aria-labelledby="palette-title" aria-describedby="palette-info">
-              <a class="full-card-link" href="./assets/restaurants/palette.html"></a>
-              <span class="restaurant_badge">Nouveau</span>
+            <article class="restaurant_card" aria-labelledby="palette-title"
+              aria-describedby="palette-info palette-badge">
+              <a class="full-card-link" href="./assets/restaurants/palette.html"
+                aria-label="Voir le menu de La palette du goût à Ménilmontant"></a>
+              <span class="restaurant_badge" id="palette-badge" aria-label="Restaurant nouveau">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
@@ -200,15 +205,21 @@
       </section>
     </main>
 
-    <footer>
-      <span>OhMyFood</span>
-      <nav>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
+    <footer role="contentinfo">
+      <span aria-label="Logo OhMyFood">OhMyFood</span>
+      <nav role="navigation" aria-label="Liens utiles">
+        <ul role="list">
+          <li role="listitem">
+            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+              Proposer un restaurant
+            </a>
+          </li>
+          <li role="listitem"><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
+          <li role="listitem"><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
           <address>
-            <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+            <li role="listitem"><a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood"><i
+                  class="fa-solid fa-envelope"></i>Contact</a></li>
           </address>
         </ul>
       </nav>
