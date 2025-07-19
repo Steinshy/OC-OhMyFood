@@ -52,15 +52,15 @@
 
   <body>
     <!-- Loader -->
-    <div class="loader_container">
-      <div class="loader"></div>
+    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours">
+      <div class="loader" aria-hidden="true"></div>
     </div>
 
     <!-- Header -->
     <header>
       <nav class="header_nav">
         <a href="../../index.html" aria-label="Retour à l'accueil">
-          <i class="fa-solid fa-arrow-left"></i>
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
         <img src="../../assets/img/logo/ohmyfood-dark.png" alt="Logo OhMyFood - Retour à l'accueil" height="30"
           loading="lazy">
@@ -68,7 +68,7 @@
     </header>
 
     <main>
-      <div class="main_banner_container">
+      <div class="main_banner_container" role="region" aria-label="Image du restaurant">
         <picture>
           <source srcset="../../assets/img/restaurants/webp/francaise.webp" type="image/webp">
           <source srcset="../../assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
@@ -77,23 +77,23 @@
         </picture>
       </div>
 
-      <section class="menu_container">
+      <section class="menu_container" aria-labelledby="restaurant-title">
         <div class="menu_container_title">
-          <h1>À la française</h1>
-          <i class="fa-solid fa-heart custom_heart"></i>
+          <h1 id="restaurant-title">À la française</h1>
+          <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
         </div>
 
         <!-- Menu Sections -->
-        <section class="menu_sections">
+        <section class="menu_sections" aria-labelledby="entrees-title">
           <div class="menu_sections_title">
-            <h2>Entrées</h2>
+            <h2 id="entrees-title">Entrées</h2>
           </div>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-1-title" aria-describedby="item-1-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Tartare de poulpe acidulé</h3>
-                <span>Aux zestes d'orange</span>
+                <h3 id="item-1-title">Tartare de poulpe acidulé</h3>
+                <span id="item-1-desc">Aux zestes d'orange</span>
               </div>
             </div>
             <div class="check_container">
@@ -101,16 +101,16 @@
                 <span>25€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-2-title" aria-describedby="item-2-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Velouté de légumes d'antan</h3>
-                <span>Carotte, panais, topinambour</span>
+                <h3 id="item-2-title">Velouté de légumes d'antan</h3>
+                <span id="item-2-desc">Carotte, panais, topinambour</span>
               </div>
             </div>
             <div class="check_container">
@@ -118,16 +118,16 @@
                 <span>35€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-3-title" aria-describedby="item-3-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Soupe à l'oignon</h3>
-                <span>Revisitée</span>
+                <h3 id="item-3-title">Soupe à l'oignon</h3>
+                <span id="item-3-desc">Revisitée</span>
               </div>
             </div>
             <div class="check_container">
@@ -135,22 +135,22 @@
                 <span>20€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
         </section>
 
-        <section class="menu_sections">
+        <section class="menu_sections" aria-labelledby="plats-title">
           <div class="menu_sections_title">
-            <h2>Plats</h2>
+            <h2 id="plats-title">Plats</h2>
           </div>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-4-title" aria-describedby="item-4-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Coquilles Saint-Jacques</h3>
-                <span>Accompagnées d'une purée de panais</span>
+                <h3 id="item-4-title">Coquilles Saint-Jacques</h3>
+                <span id="item-4-desc">Accompagnées d'une purée de panais</span>
               </div>
             </div>
             <div class="check_container">
@@ -158,16 +158,16 @@
                 <span>40€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-5-title" aria-describedby="item-5-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Magret de canard</h3>
-                <span>Et parmentier de pommes de terre</span>
+                <h3 id="item-5-title">Magret de canard</h3>
+                <span id="item-5-desc">Et parmentier de pommes de terre</span>
               </div>
             </div>
             <div class="check_container">
@@ -175,16 +175,16 @@
                 <span>35€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-6-title" aria-describedby="item-6-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Pigeonneau d'Ille-et-Vilaine</h3>
-                <span>Sur son lit de gnocchis aux légumes</span>
+                <h3 id="item-6-title">Pigeonneau d'Ille-et-Vilaine</h3>
+                <span id="item-6-desc">Sur son lit de gnocchis aux légumes</span>
               </div>
             </div>
             <div class="check_container">
@@ -192,22 +192,22 @@
                 <span>44€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
         </section>
 
-        <section class="menu_sections">
+        <section class="menu_sections" aria-labelledby="desserts-title">
           <div class="menu_sections_title">
-            <h2>Desserts</h2>
+            <h2 id="desserts-title">Desserts</h2>
           </div>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-7-title" aria-describedby="item-7-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Pétales de violettes glacés</h3>
-                <span>Et purée de noisettes</span>
+                <h3 id="item-7-title">Pétales de violettes glacés</h3>
+                <span id="item-7-desc">Et purée de noisettes</span>
               </div>
             </div>
             <div class="check_container">
@@ -215,16 +215,16 @@
                 <span>18€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-8-title" aria-describedby="item-8-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Fondant au chocolat</h3>
-                <span>Revisité</span>
+                <h3 id="item-8-title">Fondant au chocolat</h3>
+                <span id="item-8-desc">Revisité</span>
               </div>
             </div>
             <div class="check_container">
@@ -232,16 +232,16 @@
                 <span>22€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
 
-          <article class="menu_items">
+          <article class="menu_items" aria-labelledby="item-9-title" aria-describedby="item-9-desc">
             <div class="menu_item_content">
               <div class="content_description">
-                <h3>Millefeuille croustillant</h3>
-                <span>Myrtilles et pâte d'amande</span>
+                <h3 id="item-9-title">Millefeuille croustillant</h3>
+                <span id="item-9-desc">Myrtilles et pâte d'amande</span>
               </div>
             </div>
             <div class="check_container">
@@ -249,7 +249,7 @@
                 <span>23€</span>
               </div>
               <div class="check_icon">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
@@ -262,11 +262,12 @@
       <span>OhMyFood</span>
       <nav>
         <ul>
-          <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
+          <li><a href="#"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
+          <li><a href="#"><i class="fa-solid fa-handshake" aria-hidden="true"></i>Devenir partenaire</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-contract" aria-hidden="true"></i>Mentions légales</a></li>
           <address>
-            <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+            <li><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a>
+            </li>
           </address>
         </ul>
       </nav>

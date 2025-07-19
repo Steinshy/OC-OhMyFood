@@ -51,8 +51,8 @@
 
   <body>
     <!-- Loader -->
-    <div class="loader_container">
-      <div class="loader"></div>
+    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours">
+      <div class="loader" aria-hidden="true"></div>
     </div>
 
     <!-- Header -->
@@ -65,8 +65,8 @@
 
     <main>
       <!-- Banner Location -->
-      <div class="main_banner_location">
-        <i class="fa-solid fa-location-dot"></i>
+      <div class="main_banner_location" role="region" aria-label="Position actuelle">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         <p>Paris, Belleville</p>
       </div>
 
@@ -77,12 +77,12 @@
         <button>Explorer nos restaurants</button>
       </section>
       <!-- Orders Section -->
-      <section class="booking_orders">
-        <h2>Fonctionnement</h2>
-        <div class="booking_orders_container">
+      <section class="booking_orders" aria-labelledby="fonctionnement-titre">
+        <h2 id="fonctionnement-titre">Fonctionnement</h2>
+        <ol class="booking_orders_container">
 
           <!-- Booking Order Card -->
-          <div class="booking_card">
+          <li class="booking_card" aria-label="Étape 1 : Choisissez un restaurant">
             <div class="card_circle">
               <span>1</span>
             </div>
@@ -90,10 +90,10 @@
               <i class="fa-solid fa-mobile-screen-button"></i>
               <h3>Choisissez un restaurant</h3>
             </div>
-          </div>
+          </li>
 
           <!-- Booking Order Card -->
-          <div class="booking_card">
+          <li class="booking_card" aria-label="Étape 2 : Composez votre menu">
             <div class="card_circle">
               <span>2</span>
             </div>
@@ -101,10 +101,10 @@
               <i class="fa-solid fa-list-check"></i>
               <h3>Composez votre menu</h3>
             </div>
-          </div>
+          </li>
 
           <!-- Booking Order Card -->
-          <div class="booking_card">
+          <li class="booking_card" aria-label="Étape 3 : Dégustez au restaurant">
             <div class="card_circle">
               <span>3</span>
             </div>
@@ -112,8 +112,8 @@
               <i class="fa-solid fa-store"></i>
               <h3>Dégustez au restaurant</h3>
             </div>
-          </div>
-        </div>
+          </li>
+        </ol>
       </section>
 
       <!-- Restaurants Section -->
@@ -123,8 +123,8 @@
 
           <div class="restaurants_cards">
 
-            <article class="restaurant_card">
-              <a href="./assets/restaurants/palette.html" aria-labelledby="palette-title"></a>
+            <article class="restaurant_card" aria-labelledby="palette-title" aria-describedby="palette-info">
+              <a class="full-card-link" href="./assets/restaurants/palette.html"></a>
               <span class="restaurant_badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
@@ -132,18 +132,18 @@
                 <img class="restaurant_image" alt="Photo du restaurant La palette du goût"
                   src="assets/img/restaurants/jpg/palette.jpg" loading="lazy">
               </picture>
-              <div class="restaurant_card_content">
+              <div class="restaurant_card_content" id="palette-info">
                 <div class="card_title">
                   <h3 id="palette-title">La palette du goût</h3>
                   <p>Ménilmontant</p>
                 </div>
-                <i class="fa-solid fa-heart custom_heart"></i>
+                <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
               </div>
             </article>
 
             <!-- Restaurants Card -->
-            <article class="restaurant_card">
-              <a href="./assets/restaurants/note.html" aria-labelledby="note-title"></a>
+            <article class="restaurant_card" aria-labelledby="note-title" aria-describedby="note-info">
+              <a class="full-card-link" href="./assets/restaurants/note.html"></a>
               <span class="restaurant_badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
@@ -151,48 +151,48 @@
                 <img class="restaurant_image" alt="Photo du restaurant La note enchantée"
                   src="assets/img/restaurants/jpg/note.jpg" loading="lazy">
               </picture>
-              <div class="restaurant_card_content">
+              <div class="restaurant_card_content" id="note-info">
                 <div class="card_title">
                   <h3 id="note-title">La note enchantée</h3>
                   <p>Charonne</p>
                 </div>
-                <i class="fa-solid fa-heart custom_heart"></i>
+                <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
               </div>
             </article>
 
             <!-- Restaurants Card -->
-            <article class="restaurant_card">
-              <a href="./assets/restaurants/francaise.html" aria-labelledby="francaise-title"></a>
+            <article class="restaurant_card" aria-labelledby="francaise-title" aria-describedby="francaise-info">
+              <a class="full-card-link" href="./assets/restaurants/francaise.html"></a>
               <picture>
                 <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant À la française"
                   src="assets/img/restaurants/jpg/francaise.jpg" loading="lazy">
               </picture>
-              <div class="restaurant_card_content">
+              <div class="restaurant_card_content" id="francaise-info">
                 <div class="card_title">
                   <h3 id="francaise-title">À la française</h3>
                   <p>Cité Rouge</p>
                 </div>
-                <i class="fa-solid fa-heart custom_heart"></i>
+                <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
               </div>
             </article>
 
             <!-- Restaurants Card -->
-            <article class="restaurant_card">
-              <a href="./assets/restaurants/delice.html" aria-labelledby="delice-title"></a>
+            <article class="restaurant_card" aria-labelledby="delice-title" aria-describedby="delice-info">
+              <a class="full-card-link" href="./assets/restaurants/delice.html"></a>
               <picture>
                 <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
                 <img class="restaurant_image" alt="Photo du restaurant Le délice des sens"
                   src="assets/img/restaurants/jpg/delice.jpg" loading="lazy">
               </picture>
-              <div class="restaurant_card_content">
+              <div class="restaurant_card_content" id="delice-info">
                 <div class="card_title">
                   <h3 id="delice-title">Le délice des sens</h3>
                   <p>Folie-Méricourt</p>
                 </div>
-                <i class="fa-solid fa-heart custom_heart"></i>
+                <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
               </div>
             </article>
           </div>
