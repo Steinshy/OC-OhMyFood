@@ -62,8 +62,8 @@
     </div>
 
     <!-- Header -->
-    <header role="banner">
-      <nav class="header_nav" role="navigation" aria-label="Navigation du restaurant">
+    <header>
+      <nav class="header_nav" aria-label="Navigation du restaurant">
         <a href="index.html" aria-label="Retour à la page d'accueil">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
@@ -71,7 +71,7 @@
       </nav>
     </header>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
       <!-- Banner Container -->
       <div class="main_banner_container" role="img" aria-label="Photo du restaurant À la française">
         <picture>
@@ -259,43 +259,41 @@
             </div>
           </article>
         </section>
-        <button type="button" aria-describedby="order-description" aria-label="Commander les plats sélectionnés">
+        <button type="button">
           Commander
         </button>
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <span aria-label="Logo OhMyFood">OhMyFood</span>
-      <nav role="navigation" aria-label="Liens utiles">
-        <ul role="list">
-          <li role="listitem">
-            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+    <footer>
+      <span>OhMyFood</span>
+      <nav aria-label="Liens utiles">
+        <ul>
+          <li>
+            <a href="#">
               <i class="fa-solid fa-utensils" aria-hidden="true"></i>
               Proposer un restaurant
             </a>
           </li>
-          <li role="listitem">
+          <li>
             <a href="#">
               <i class="fa-solid fa-handshake" aria-hidden="true"></i>
               Devenir partenaire
             </a>
           </li>
-          <li role="listitem">
+          <li>
             <a href="#">
               <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
               Mentions légales
             </a>
           </li>
-          <address>
-            <li role="listitem">
-              <a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                Contact
-              </a>
-            </li>
-          </address>
         </ul>
+        <address>
+          <a href="mailto:contact@ohmyfood.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Contact
+          </a>
+        </address>
       </nav>
     </footer>
   </body>

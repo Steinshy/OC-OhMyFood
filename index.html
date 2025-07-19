@@ -59,16 +59,15 @@
     </div>
 
     <!-- Header -->
-    <header role="banner">
-      <nav class="header_nav" role="navigation" aria-label="Navigation principale">
+    <header>
+      <nav class="header_nav" aria-label="Navigation principale">
         <img src="./assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
       <!-- Banner Location -->
-      <div class="main_banner_location" role="region" aria-label="Localisation actuelle"
-        aria-describedby="location-description">
+      <div class="main_banner_location">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         <p>Paris, Belleville</p>
       </div>
@@ -77,7 +76,7 @@
       <section class="booking_section">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button aria-describedby="booking-description" aria-label="Explorer nos restaurants disponibles">
+        <button>
           Explorer nos restaurants
         </button>
       </section>
@@ -85,9 +84,9 @@
       <!-- Booking Orders -->
       <section class="booking_orders" aria-labelledby="fonctionnement-titre">
         <h2 id="fonctionnement-titre">Fonctionnement</h2>
-        <ol class="booking_orders_container" role="list" aria-label="Étapes pour commander">
+        <ol class="booking_orders_container">
 
-          <li class="booking_card" aria-label="Étape 1 : Choisissez un restaurant">
+          <li class="booking_card">
             <div class="card_circle">
               <span>1</span>
             </div>
@@ -97,7 +96,7 @@
             </div>
           </li>
 
-          <li class="booking_card" aria-label="Étape 2 : Composez votre menu">
+          <li class="booking_card">
             <div class="card_circle">
               <span>2</span>
             </div>
@@ -107,7 +106,7 @@
             </div>
           </li>
 
-          <li class="booking_card" aria-label="Étape 3 : Dégustez au restaurant">
+          <li class="booking_card">
             <div class="card_circle">
               <span>3</span>
             </div>
@@ -120,7 +119,7 @@
       </section>
 
       <!-- Restaurants -->
-      <section class="restaurants" id="goto-restaurants" role="region" aria-labelledby="restaurants-heading">
+      <section class="restaurants" id="goto-restaurants" aria-labelledby="restaurants-heading">
         <div class="restaurants_container">
           <h2 id="restaurants-heading">Restaurants</h2>
           <div class="restaurants_cards">
@@ -130,7 +129,7 @@
               aria-describedby="palette-info palette-badge">
               <a class="full-card-link" href="./assets/restaurants/palette.html"
                 aria-label="Voir le menu de La palette du goût à Ménilmontant"></a>
-              <span class="restaurant_badge" id="palette-badge" aria-label="Restaurant nouveau">Nouveau</span>
+              <span class="restaurant_badge" id="palette-badge">Nouveau</span>
               <picture>
                 <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
                 <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
@@ -205,23 +204,24 @@
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <span aria-label="Logo OhMyFood">OhMyFood</span>
-      <nav role="navigation" aria-label="Liens utiles">
-        <ul role="list">
-          <li role="listitem">
-            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+    <footer>
+      <span>OhMyFood</span>
+      <nav aria-label="Liens utiles">
+        <ul>
+          <li>
+            <a href="#">
               <i class="fa-solid fa-utensils" aria-hidden="true"></i>
               Proposer un restaurant
             </a>
           </li>
-          <li role="listitem"><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
-          <li role="listitem"><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
-          <address>
-            <li role="listitem"><a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood"><i
-                  class="fa-solid fa-envelope"></i>Contact</a></li>
-          </address>
+          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
+          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
         </ul>
+        <address>
+          <a href="mailto:contact@ohmyfood.com">
+            <i class="fa-solid fa-envelope"></i>Contact
+          </a>
+        </address>
       </nav>
     </footer>
   </body>

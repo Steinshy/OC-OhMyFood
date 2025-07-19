@@ -57,14 +57,13 @@
 
   <body>
     <!-- Loader -->
-    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours"
-      aria-describedby="loading-text">
+    <div class="loader_container" role="status" aria-live="polite" aria-label="Chargement en cours">
       <div class="loader" aria-hidden="true"></div>
     </div>
 
     <!-- Header -->
-    <header role="banner">
-      <nav class="header_nav" role="navigation" aria-label="Navigation du restaurant">
+    <header>
+      <nav class="header_nav" aria-label="Navigation du restaurant">
         <a href="index.html" aria-label="Retour à la page d'accueil">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
         </a>
@@ -72,7 +71,7 @@
       </nav>
     </header>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
       <!-- Banner Container -->
       <div class="main_banner_container" role="img" aria-label="Photo du restaurant Le délice des sens">
         <picture>
@@ -83,15 +82,14 @@
       </div>
 
       <!-- Menu Container -->
-      <section class="menu_container" role="region" aria-labelledby="restaurant-title"
-        aria-describedby="restaurant-info">
+      <section class="menu_container" aria-labelledby="restaurant-title">
         <div class="menu_container_title">
           <h1 id="restaurant-title">Le délice des sens</h1>
           <i class="fa-solid fa-heart custom_heart" aria-hidden="true"></i>
         </div>
 
         <!-- Menu Sections -->
-        <section class="menu_sections" role="region" aria-labelledby="entrees-title">
+        <section class="menu_sections" aria-labelledby="entrees-title">
           <div class="menu_sections_title">
             <h2 id="entrees-title">Entrées</h2>
           </div>
@@ -149,7 +147,7 @@
           </article>
         </section>
 
-        <section class="menu_sections" role="region" aria-labelledby="plats-title">
+        <section class="menu_sections" aria-labelledby="plats-title">
           <div class="menu_sections_title">
             <h2 id="plats-title">Plats</h2>
           </div>
@@ -188,8 +186,7 @@
             </div>
           </article>
 
-          <article class="menu_items" role="button" tabindex="0" aria-labelledby="item-6-title"
-            aria-describedby="item-6-desc item-6-price" aria-pressed="false">
+          <article class="menu_items" aria-labelledby="item-6-title" aria-describedby="item-6-desc">
             <div class="menu_item_content">
               <div class="content_description">
                 <h3 id="item-6-title">Côte de bœuf Angus</h3>
@@ -198,16 +195,16 @@
             </div>
             <div class="check_container">
               <div class="content_price">
-                <span id="item-6-price" aria-label="Prix : 44 euros">44€</span>
+                <span>44€</span>
               </div>
-              <div class="check_icon" aria-label="Sélectionné" role="status">
+              <div class="check_icon">
                 <i class="fa-solid fa-check" aria-hidden="true"></i>
               </div>
             </div>
           </article>
         </section>
 
-        <section class="menu_sections" role="region" aria-labelledby="desserts-title">
+        <section class="menu_sections" aria-labelledby="desserts-title">
           <div class="menu_sections_title">
             <h2 id="desserts-title">Desserts</h2>
           </div>
@@ -264,43 +261,41 @@
           </article>
         </section>
 
-        <button type="button" aria-describedby="order-description" aria-label="Commander les plats sélectionnés">
+        <button type="button">
           Commander
         </button>
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <span aria-label="Logo OhMyFood">OhMyFood</span>
-      <nav role="navigation" aria-label="Liens utiles">
-        <ul role="list">
-          <li role="listitem">
-            <a href="#" aria-label="Proposer votre restaurant sur OhMyFood">
+    <footer>
+      <span>OhMyFood</span>
+      <nav aria-label="Liens utiles">
+        <ul>
+          <li>
+            <a href="#">
               <i class="fa-solid fa-utensils" aria-hidden="true"></i>
               Proposer un restaurant
             </a>
           </li>
-          <li role="listitem">
+          <li>
             <a href="#">
               <i class="fa-solid fa-handshake" aria-hidden="true"></i>
               Devenir partenaire
             </a>
           </li>
-          <li role="listitem">
+          <li>
             <a href="#">
               <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
               Mentions légales
             </a>
           </li>
-          <address>
-            <li role="listitem">
-              <a href="mailto:contact@ohmyfood.com" aria-label="Envoyer un email à OhMyFood">
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                Contact
-              </a>
-            </li>
-          </address>
         </ul>
+        <address>
+          <a href="mailto:contact@ohmyfood.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Contact
+          </a>
+        </address>
       </nav>
     </footer>
   </body>
