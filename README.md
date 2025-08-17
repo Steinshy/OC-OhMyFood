@@ -125,9 +125,9 @@ OhMyFood/
 - **Police principale** : Roboto
 - **Police titre** : Shrikhand
 - **Couleurs** :
-  - Primaire : <span style="color:#9356DC">■ #9356DC</span>
-  - Secondaire : <span style="color:#FF79DA">■ #FF79DA</span>
-  - Tertiaire : <span style="color:#99E2D0">■ #99E2D0</span>
+  - Primaire : #9356DC
+  - Secondaire : #FF79DA
+  - Tertiaire : #99E2D0
 
 ---
 
