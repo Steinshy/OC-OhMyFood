@@ -20,7 +20,6 @@
 ## 🗂️ Dépôt GitHub
 
 - [Branche principale](https://github.com/Steinshy/OC-OhMyFood/tree/main)
-- [Branche de développement](https://github.com/Steinshy/OC-OhMyFood/tree/dev)
 
 ---
 
