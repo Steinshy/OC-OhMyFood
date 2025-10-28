@@ -1,55 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
   <head>
-    <!-- Meta Tags & Document Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta
+      name="description"
       content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
-    <meta name="keywords"
-      content="OhMyFood, Restaurants Gastronomique, Menu, Restaurant, Gastronomie, Paris, Restaurant Gastronomique, Menu Restaurant">
+    <meta name="keywords" content="OhMyFood, Restaurants Gastronomique, Menu, Restaurant, Gastronomie, Paris, Restaurant Gastronomique, Menu Restaurant">
     <meta name=" author" content="OpenClassrooms">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Social Media Meta Tags -->
     <meta property="og:title" content="OhMyFood - Restaurants Gastronomique">
-    <meta property="og:description"
+    <meta
+      property="og:description"
       content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnez votre restaurant préféré et vivez une expérience culinaire unique.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:image" content="assets/img/logo/ohmyfood.png">
+    <meta property="og:image" content="./favicons/ohmyfood-white.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="OhMyFood - Restaurants Gastronomique">
-    <meta name="twitter:description"
+    <meta
+      name="twitter:description"
       content="Découvrez et réservez les meilleurs restaurants gastronomiques à Paris avec OhMyFood. Parcourez des menus exclusifs, sélectionnés par nos soins et vivez une expérience culinaire unique.">
-    <meta name="twitter:image" content="assets/img/logo/ohmyfood.png">
+    <meta name="twitter:image" content="./favicons/ohmyfood-white.png">
 
     <title>OhMyFood - Restaurants Gastronomique</title>
 
-    <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
-    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="icon" href="./favicons/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#9356dc">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/animation.css">
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
-      rel="stylesheet">
-
-    <!-- Internal Resources -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/animation.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer">
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
   </head>
 
   <body>
@@ -58,34 +57,27 @@
       <div class="loader" aria-hidden="true"></div>
     </div>
 
-    <!-- Header -->
     <header>
       <nav class="header_nav" aria-label="Navigation principale">
-        <img src="./assets/img/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
+        <img src="./favicons/ohmyfood@2x.svg" alt="Logo OhMyFood" height="30" loading="lazy">
       </nav>
     </header>
 
     <main id="main-content">
-      <!-- Banner Location -->
       <div class="main_banner_location">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         <p>Paris, Belleville</p>
       </div>
 
-      <!-- Booking Section -->
       <section class="booking_section">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button>
-          Explorer nos restaurants
-        </button>
+        <button>Explorer nos restaurants</button>
       </section>
 
-      <!-- Booking Orders -->
       <section class="booking_orders" aria-labelledby="fonctionnement-titre">
         <h2 id="fonctionnement-titre">Fonctionnement</h2>
         <ol class="booking_orders_container">
-
           <li class="booking_card">
             <div class="card_circle">
               <span>1</span>
@@ -123,18 +115,14 @@
         <div class="restaurants_container">
           <h2 id="restaurants-heading">Restaurants</h2>
           <div class="restaurants_cards">
-
             <!-- Restaurants Card -->
-            <article class="restaurant_card" aria-labelledby="palette-title"
-              aria-describedby="palette-info palette-badge">
-              <a class="full-card-link" href="./assets/restaurants/palette.html"
-                aria-label="Voir le menu de La palette du goût à Ménilmontant"></a>
+            <article class="restaurant_card" aria-labelledby="palette-title" aria-describedby="palette-info palette-badge">
+              <a class="full-card-link" href="./palette.html" aria-label="Voir le menu de La palette du goût à Ménilmontant"></a>
               <span class="restaurant_badge" id="palette-badge">Nouveau</span>
               <picture>
-                <source srcset="assets/img/restaurants/webp/palette.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/palette.jpg" type="image/jpeg">
-                <img class="restaurant_image" alt="Photo du restaurant La palette du goût"
-                  src="./assets/img/restaurants/jpg/palette.jpg" loading="lazy">
+                <source srcset="./restaurants/palette.webp" type="image/webp">
+                <source srcset="./restaurants/palette.jpg" type="image/jpeg">
+                <img class="restaurant_image" alt="Photo du restaurant La palette du goût" src="./restaurants/palette.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="palette-info">
                 <div class="card_title">
@@ -145,15 +133,13 @@
               </div>
             </article>
 
-            <!-- Restaurants Card -->
             <article class="restaurant_card" aria-labelledby="note-title" aria-describedby="note-info">
-              <a class="full-card-link" href="./assets/restaurants/note.html"></a>
+              <a class="full-card-link" href="./note.html"></a>
               <span class="restaurant_badge">Nouveau</span>
               <picture>
-                <source srcset="assets/img/restaurants/webp/note.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/note.jpg" type="image/jpeg">
-                <img class="restaurant_image" alt="Photo du restaurant La note enchantée"
-                  src="./assets/img/restaurants/jpg/note.jpg" loading="lazy">
+                <source srcset="./restaurants/note.webp" type="image/webp">
+                <source srcset="./restaurants/note.jpg" type="image/jpeg">
+                <img class="restaurant_image" alt="Photo du restaurant La note enchantée" src="./restaurants/note.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="note-info">
                 <div class="card_title">
@@ -164,14 +150,12 @@
               </div>
             </article>
 
-            <!-- Restaurants Card -->
             <article class="restaurant_card" aria-labelledby="francaise-title" aria-describedby="francaise-info">
-              <a class="full-card-link" href="./assets/restaurants/francaise.html"></a>
+              <a class="full-card-link" href="./francaise.html"></a>
               <picture>
-                <source srcset="assets/img/restaurants/webp/francaise.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/francaise.jpg" type="image/jpeg">
-                <img class="restaurant_image" alt="Photo du restaurant À la française"
-                  src="./assets/img/restaurants/jpg/francaise.jpg" loading="lazy">
+                <source srcset="./restaurants/francaise.webp" type="image/webp">
+                <source srcset="./restaurants/francaise.jpg" type="image/jpeg">
+                <img class="restaurant_image" alt="Photo du restaurant À la française" src="./restaurants/francaise.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="francaise-info">
                 <div class="card_title">
@@ -182,14 +166,12 @@
               </div>
             </article>
 
-            <!-- Restaurants Card -->
             <article class="restaurant_card" aria-labelledby="delice-title" aria-describedby="delice-info">
-              <a class="full-card-link" href="./assets/restaurants/delice.html"></a>
+              <a class="full-card-link" href="./delice.html"></a>
               <picture>
-                <source srcset="assets/img/restaurants/webp/delice.webp" type="image/webp">
-                <source srcset="assets/img/restaurants/jpg/delice.jpg" type="image/jpeg">
-                <img class="restaurant_image" alt="Photo du restaurant Le délice des sens"
-                  src="./assets/img/restaurants/jpg/delice.jpg" loading="lazy">
+                <source srcset="./restaurants/delice.webp" type="image/webp">
+                <source srcset="./restaurants/delice.jpg" type="image/jpeg">
+                <img class="restaurant_image" alt="Photo du restaurant Le délice des sens" src="./restaurants/delice.jpg" loading="lazy">
               </picture>
               <div class="restaurant_card_content" id="delice-info">
                 <div class="card_title">
@@ -205,25 +187,38 @@
     </main>
 
     <footer>
-      <span>OhMyFood</span>
-      <nav aria-label="Liens utiles">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-              Proposer un restaurant
-            </a>
-          </li>
-          <li><a href="#"><i class="fa-solid fa-handshake"></i>Devenir partenaire</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-contract"></i>Mentions légales</a></li>
-        </ul>
-        <address>
-          <a href="mailto:contact@ohmyfood.com">
-            <i class="fa-solid fa-envelope"></i>Contact
-          </a>
-        </address>
-      </nav>
+      <div class="footer_content">
+        <span class="footer_brand">OhMyFood</span>
+        <nav aria-label="Liens utiles">
+          <ul class="footer_links">
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                Proposer un restaurant
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-handshake"></i>
+                Devenir partenaire
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-file-contract"></i>
+                Mentions légales
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@ohmyfood.com">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2024 OhMyFood. Tous droits réservés.</p>
     </footer>
   </body>
-
 </html>
