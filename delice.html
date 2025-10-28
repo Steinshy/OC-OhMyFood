@@ -42,10 +42,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand:wght@400&display=swap" rel="stylesheet">
 
     <!-- Internal Resources -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/loader.css">
-    <link rel="stylesheet" href="./css/restaurants.css">
-    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/loader.min.css">
+    <link rel="stylesheet" href="./css/restaurants.min.css">
+    <link rel="stylesheet" href="./css/animation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
 
@@ -69,7 +69,7 @@
         <picture>
           <source srcset="./restaurants/delice.webp" type="image/webp">
           <source srcset="./restaurants/delice.jpg" type="image/jpeg">
-          <img alt="Photo du restaurant Le délice des sens" src="./restaurants/delice.jpg" loading="eager">
+          <img alt="Photo du restaurant Le délice des sens" src="./restaurants/delice.jpg" loading="eager" fetchpriority="high">
         </picture>
       </div>
 
@@ -267,19 +267,19 @@
             </li>
             <li>
               <a href="#">
-                <i class="fa-solid fa-handshake"></i>
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
                 Devenir partenaire
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa-solid fa-file-contract"></i>
+                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
                 Mentions légales
               </a>
             </li>
             <li>
               <a href="mailto:contact@ohmyfood.com">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 Contact
               </a>
             </li>

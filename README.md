@@ -1,126 +1,119 @@
-# 🍽️ OhMyFood
+# OhMyFood
 
-**OhMyFood** est une application web responsive qui permet aux clients de composer leur menu gastronomique à l’avance et de réduire leur temps d’attente dans les restaurants partenaires.
+[![HTML5](https://img.shields.io/badge/HTML5-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![PWA](https://img.shields.io/badge/PWA-Progressive%20Web%20App-5A0FC8?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-6.7.2-339AF0?logo=font-awesome&logoColor=white&style=for-the-badge)](https://fontawesome.com/)
+[![Google Fonts](https://img.shields.io/badge/Google%20Fonts-Roboto%20%26%20Shrikhand-4285F4?logo=google-fonts&logoColor=white&style=for-the-badge)](https://fonts.google.com/)
 
----
+OhMyFood est une application web responsive qui permet aux clients de composer leur menu gastronomique à l'avance et de réduire leur temps d'attente dans les restaurants partenaires.
 
-![Aperçu de l'application OhMyFood](./assets/screenshots/ohmyfood_showcase.png)
+![OhMyFood Showcase](./favicons/ohmyfood_showcase.png)
 
----
+## Démonstration
 
-## 🚀 Aperçu rapide
+- 🌐 **Demo :** [https://steinshy.github.io/OC-OhMyFood/](https://steinshy.github.io/OC-OhMyFood/)
+- 📦 **GitHub :** [https://github.com/Steinshy/OC-OhMyFood](https://github.com/Steinshy/OC-OhMyFood)
 
-- **4 restaurants parisiens** avec menus interactifs
-- **Animations CSS élégantes** et micro-interactions
-- **100% mobile-first** et accessible
-- **Aucune dépendance JS** : HTML & CSS pur
+## Structure du projet
 
----
-
-## 🗂️ Dépôt GitHub
-
-- [Branche principale](https://github.com/Steinshy/OC-OhMyFood/tree/main)
-
----
-
-## 🏗️ Structure du projet
-
-```
+```text
 OhMyFood/
-├── assets/
-│   ├── css/           # Feuilles de style CSS du projet
-│   │   ├── animation.css     # Animations CSS
-│   │   ├── restaurants.css   # Styles spécifiques aux pages restaurants
-│   │   └── style.css         # Styles généraux du site
-│   ├── favicons/      # Icônes favicon du site
-│   ├── img/           # Images utilisées dans le site
-│   │   ├── logo/          # Logos OhMyFood (png, svg)
-│   │   └── restaurants/   # Images des restaurants
-│   │       ├── jpg/           # Images des restaurants au format JPG
-│   │       └── webp/          # Images des restaurants au format WebP
-│   ├── restaurants/      # Pages HTML individuelles des restaurants
-│   │   ├── delice.html      # Page du restaurant Le Délice des Sens
-│   │   ├── francaise.html   # Page du restaurant La note enchantée
-│   │   ├── note.html        # Page du restaurant La palette du goût
-│   │   └── palette.html     # Page du restaurant La française gourmande
-│   ├── screenshots/      # Captures d'écran du projet
-│   └── manifest.json     # Fichier manifest pour PWA
-├── index.html         # Page d'accueil
+├── css/                    # Feuilles de style CSS
+│   ├── animation.css        # Animations CSS
+│   ├── loader.css          # Styles du loader
+│   ├── restaurants.css     # Styles spécifiques aux pages restaurants
+│   ├── style.css           # Styles généraux du site
+├── favicons/              # Icônes de l'application
+├── restaurants/           # Images des restaurants (JPG - webp)
+├── delice.html           # Page du restaurant Le délice des sens
+├── francaise.html        # Page du restaurant À la française
+├── index.html           # Page principale
+├── note.html           # Page du restaurant La note enchantée
+├── palette.html        # Page du restaurant La palette du goût
+├── manifest.json       # Manifest PWA
+├── robots.txt         # Fichier robots.txt
+├── sitemap.xml        # Sitemap XML
 └── README.md          # Documentation
 ```
 
----
+## Technologies
 
-## 🛠️ Technologies
+- **HTML5** - Structure sémantique et accessible
+- **CSS3** - Animations et responsive design
+- **Font Awesome 6.7.2** - Icônes vectorielles
+- **Google Fonts** - Roboto & Shrikhand avec display=swap
+- **PWA** - Progressive Web App ready
 
-- **HTML5** (sémantique, BEM)
-- **CSS3** (variables, animations, responsive)
-- **Font Awesome 6** (icônes)
-- **WebP/JPEG** (images optimisées)
-- **PWA** (manifest)
-
----
-
-## 📱 Responsive Design
+## Responsive Design
 
 | Appareil | Point de rupture | Disposition           |
 | -------- | ---------------- | --------------------- |
-| Mobile   | < 768px          | Colonne unique        |
-| Tablette | 768px–1024px     | Grille adaptée        |
+| Mobile   | < 768px          | 1 colonne             |
+| Tablette | 768px–1024px     | 2 colonnes            |
 | Desktop  | > 1024px         | Mise en page complète |
 
----
+## Fonctionnalités principales
 
-## ✨ Fonctionnalités principales
+- Composition de menu en avance
+- Animations et transitions CSS élégantes
+- Accessibilité renforcée (ARIA, navigation clavier, contrastes)
+- Optimisation mobile et images JPG - webp
+- Aucune dépendance JavaScript
+- Performance optimisée (CSS minifié, lazy-loading, fetchpriority)
+- LCP optimisé avec images prioritaires
+- Font-display swap pour affichage immédiat du texte
+- Attributs ARIA complets pour l'accessibilité
 
-- **Composition de menu en avance**
-- **Animations et transitions CSS**
-- **Accessibilité renforcée** (ARIA, navigation clavier, contrastes)
-- **Optimisation mobile et images**
-- **Aucune dépendance JavaScript**
+## Accessibilité
 
----
-
-## ♿ Accessibilité
-
-- Structure HTML sémantique
-- Attributs ARIA et labels explicites
+- Structure HTML sémantique complète
+- Attributs ARIA complets (aria-label, aria-hidden)
 - Navigation clavier complète
 - Indicateurs de focus visibles
-- Texte alternatif pour toutes les images
+- Contraste conforme WCAG AA
+- Alternatives textuelles pour images
+- Liens avec labels discernibles
+- Support lecteurs d'écran
 
----
+## Démarrage
 
-## 🚀 Démarrage rapide
+### Installation
 
-1. Clone le dépôt
-2. Ouvre `index.html` dans ton navigateur
-3. Profite de l’expérience OhMyFood !
+```bash
+git clone https://github.com/Steinshy/OC-OhMyFood.git
+cd OhMyFood
+```
 
----
+### Utilisation
 
-## 🍴 Restaurants disponibles
+Ouvrez `index.html` dans votre navigateur. Aucun outil de build requis.
 
-- **La palette du goût** – Ménilmontant
-- **Le délice des sens** – Folie-Méricourt
-- **La note enchantée** – Charonne
-- **À la française** – Cité Rouge
+### Optimisation
 
----
+Le projet inclut des versions minifiées :
+- **CSS** : Fichiers `.min.css` pour les CSS minifiés
+- **HTML** : Fichiers `.min.html` pour les pages minifiées
 
-## 🔗 Liens utiles
+Les versions minifiées sont générées automatiquement pour une performance optimale.
+
+## Restaurants disponibles
+
+- La palette du goût – Ménilmontant
+- Le délice des sens – Folie-Méricourt
+- La note enchantée – Charonne
+- À la française – Cité Rouge
+
+## Liens utiles
 
 - [Maquette Figma](https://www.figma.com/design/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood--mobile-et-desktop-?node-id=0-1&p=f&t=Jk9BTbzoDrFkhTee-0)
 - [Prototype Figma](https://www.figma.com/proto/t4449fzDnwGYmzuwQdu87V/Maquettes-Ohmyfood--mobile-et-desktop-?node-id=25368-591&scaling=scale-down&page-id=0%3A1&starting-point-node-id=25368%3A591&show-proto-sidebar=1)
 - [Fichiers Source](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Images+et+textes+Ohmyfood.zip)
-- [Scénario du projet](https://openclassrooms.com/fr/paths/877/projects/637/704-scenario)
+- [Scénario](https://openclassrooms.com/fr/paths/877/projects/637/704-scenario)
 - [Brief créatif](https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/IW_P4+Animations+CSS+Ohmyfood/Brief+cr%C3%A9atif+site+Ohmyfood.pdf)
-- [Font Awesome 6.7.2](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css)
 - [Validateur W3C](https://validator.w3.org/)
 
----
-
-## 🎨 Design System
+## Design System
 
 - **Police principale** : Roboto
 - **Police titre** : Shrikhand
@@ -129,8 +122,10 @@ OhMyFood/
   - Secondaire : #FF79DA
   - Tertiaire : #99E2D0
 
----
+## Licence
 
-## 📄 Licence
+Ce projet est réalisé à des fins pédagogiques dans le cadre du parcours OpenClassrooms.
 
-Projet réalisé à des fins pédagogiques dans le cadre du parcours Développeur Web d’OpenClassrooms.
+**Copyright © 2025 Steinshy. Tous droits réservés.**
+
+Ce projet est fourni "tel quel", sans garantie d'aucune sorte, expresse ou implicite.
