@@ -5,10 +5,11 @@
     opacity: 1;
     visibility: visible;
   }
+
   100% {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
+    visibility: hidden;
   }
 }
 
@@ -19,27 +20,32 @@
       0 -50px,
       100% -50px;
   }
+
   15% {
     background-position:
       0 50%,
       100% -25px;
   }
+
   30% {
     background-position:
       0 100%,
       100% 50%;
   }
+
   40% {
     background-position:
       0 100%,
       100% 100%;
   }
+
   50% {
     background-position:
       0 100%,
       100% 100%,
       0 calc(100% - 8px);
   }
+
   60% {
     background-position:
       0 100%,
@@ -47,6 +53,7 @@
       0 calc(100% - 16px),
       100% 0;
   }
+
   70% {
     background-position:
       0 100%,
@@ -54,6 +61,7 @@
       0 calc(100% - 16px),
       100% calc(100% - 8px);
   }
+
   80% {
     background-position:
       0 100%,
@@ -61,6 +69,7 @@
       0 calc(100% - 16px),
       100% calc(100% - 16px);
   }
+
   90% {
     background-position:
       0 50%,
@@ -74,6 +83,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -84,18 +94,22 @@
     opacity: 0;
     transform: translateY(24px);
   }
+
   30% {
     opacity: 0.3;
     transform: translateY(12px);
   }
+
   50% {
     opacity: 0.5;
     transform: translateY(6px);
   }
+
   70% {
     opacity: 0.7;
     transform: translateY(3px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
