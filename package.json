@@ -7,6 +7,7 @@
     "lint": "npm run lint:html && npm run lint:css",
     "lint:html": "html-validate '**/*.html'",
     "lint:css": "stylelint '**/*.css' --ignore-pattern '**/*.min.css'",
+    "build:css": "for f in style loader animation restaurants; do lightningcss --minify css/$f.css -o css/$f.min.css; done",
     "format": "prettier --write \"**/*.{html,css,json,md}\"",
     "format:check": "prettier --check \"**/*.{html,css,json,md}\"",
     "update:check": "ncu",
@@ -15,10 +16,11 @@
   },
   "devDependencies": {
     "html-validate": "^9.7.1",
+    "lightningcss-cli": "^1.32.0",
+    "npm-check-updates": "^19.3.2",
     "prettier": "^3.8.1",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
-    "stylelint-order": "^7.0.1",
-    "npm-check-updates": "^19.3.2"
+    "stylelint-order": "^7.0.1"
   }
 }

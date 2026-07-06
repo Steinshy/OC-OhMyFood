@@ -2,14 +2,14 @@
   "name": "OhMyFood - Restaurants gastronomiques",
   "short_name": "OhMyFood",
   "description": "Découvrez et réservez dans les meilleurs restaurants gastronomiques de Paris. Composez votre menu et dégustez au restaurant.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#9356dc",
   "orientation": "portrait-primary",
   "lang": "fr",
   "dir": "ltr",
-  "scope": "/",
+  "scope": "./",
   "icons": [
     {
       "src": "./favicons/favicon-16x16.png",
@@ -52,7 +52,7 @@
   "screenshots": [
     {
       "src": "./favicons/ohmyfood_showcase.png",
-      "sizes": "1280x720",
+      "sizes": "1800x760",
       "type": "image/png",
       "form_factor": "wide",
       "label": "OhMyFood Application Showcase"
@@ -63,53 +63,25 @@
       "name": "La palette du goût",
       "short_name": "Palette",
       "description": "Accéder directement au menu du restaurant La palette du goût",
-      "url": "./palette.html",
-      "icons": [
-        {
-          "src": "./restaurants/palette.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "url": "./palette.html"
     },
     {
       "name": "La note enchantée",
       "short_name": "Note",
       "description": "Accéder directement au menu du restaurant La note enchantée",
-      "url": "./note.html",
-      "icons": [
-        {
-          "src": "./restaurants/note.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "url": "./note.html"
     },
     {
       "name": "À la française",
       "short_name": "Française",
       "description": "Accéder directement au menu du restaurant À la française",
-      "url": "./francaise.html",
-      "icons": [
-        {
-          "src": "./restaurants/francaise.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "url": "./francaise.html"
     },
     {
       "name": "Le délice des sens",
       "short_name": "Délice",
       "description": "Accéder directement au menu du restaurant Le délice des sens",
-      "url": "./delice.html",
-      "icons": [
-        {
-          "src": "./restaurants/delice.jpg",
-          "sizes": "192x192",
-          "type": "image/jpeg"
-        }
-      ]
+      "url": "./delice.html"
     }
   ],
   "related_applications": [],

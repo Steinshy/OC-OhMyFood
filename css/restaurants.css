@@ -23,7 +23,7 @@
   padding: var(--space-lg);
 }
 
-.menu_container button {
+.menu_container .btn {
   align-self: center;
 }
 
