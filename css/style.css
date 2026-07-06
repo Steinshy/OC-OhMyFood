@@ -115,6 +115,14 @@ img {
   object-fit: cover;
 }
 
+/* Inline SVG icons (Font Awesome Free, CC BY 4.0) */
+.icon {
+  fill: currentcolor;
+  height: 1em;
+  vertical-align: -0.125em;
+  width: auto;
+}
+
 /* Header */
 header {
   align-items: center;
@@ -130,7 +138,7 @@ header {
   position: absolute;
 }
 
-.header_nav a i {
+.header_nav a .icon {
   font-size: var(--fs-xl);
 }
 
@@ -146,7 +154,7 @@ header {
   width: var(--size-100);
 }
 
-.main_banner_location i {
+.main_banner_location .icon {
   font-size: var(--fs-lg);
   margin-inline-end: var(--space-md);
 }
@@ -221,7 +229,7 @@ header {
   font-weight: var(--fw-medium);
 }
 
-.booking_orders_container .booking_card:last-child i {
+.booking_orders_container .booking_card:last-child .icon {
   color: var(--color-primary);
 }
 
@@ -313,17 +321,18 @@ header {
 .custom_heart {
   color: var(--color-white);
   font-size: var(--fs-lg);
-  -webkit-text-stroke: 1.5px #000;
+  stroke: var(--color-text);
+  stroke-width: 38px;
   transition:
     color 0.3s,
-    -webkit-text-stroke 0.3s;
+    stroke 0.3s;
   z-index: 2;
 }
 
 .custom_heart:hover,
 .custom_heart:focus-visible {
   color: var(--color-primary);
-  -webkit-text-stroke: transparent;
+  stroke: transparent;
 }
 
 /* Footer */
@@ -367,7 +376,7 @@ footer .footer_links a {
   gap: var(--space-sm);
 }
 
-footer .footer_links i {
+footer .footer_links .icon {
   font-size: var(--fs-base);
 }
 
