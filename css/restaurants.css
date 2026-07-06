@@ -118,8 +118,8 @@
   width: 60%;
 }
 
-.menu_items:hover .check_icon i,
-.menu_items:focus-within .check_icon i {
+.menu_items:hover .check_icon .icon,
+.menu_items:focus-within .check_icon .icon {
   transform: rotate(360deg);
 }
 
@@ -169,15 +169,12 @@
   width: var(--space-3xl);
 }
 
-.check_icon i {
-  align-items: center;
+.check_icon .icon {
   background-color: var(--color-white);
   border-radius: var(--size-50);
   color: var(--color-badge);
-  display: flex;
-  font-size: var(--fs-lg);
   height: var(--space-lg);
-  justify-content: center;
+  padding: 5px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: var(--space-lg);
 }
