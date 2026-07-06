@@ -6,7 +6,7 @@
     "wcag/h30": "warn",
     "require-sri": "off",
     "no-trailing-whitespace": "error",
-    "void-style": ["error", { "style": "omit" }],
+    "void-style": ["error", { "style": "selfclosing" }],
     "attr-quotes": ["error", { "style": "double" }],
     "wcag/h63": "warn",
     "wcag/h67": "warn"

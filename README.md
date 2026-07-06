@@ -18,23 +18,23 @@ OhMyFood est une application web responsive qui permet aux clients de composer l
 ## Structure du projet
 
 ```text
-OhMyFood/
-├── css/                    # Feuilles de style CSS
-│   ├── animation.css        # Animations CSS
-│   ├── loader.css          # Styles du loader
-│   ├── restaurants.css     # Styles spécifiques aux pages restaurants
-│   ├── style.css           # Styles généraux du site
+OC-OhMyFood/
+├── css/                   # Feuilles de style CSS (+ versions .min.css générées)
+│   ├── animation.css      # Animations CSS
+│   ├── loader.css         # Styles du loader
+│   ├── restaurants.css    # Styles spécifiques aux pages restaurants
+│   └── style.css          # Styles généraux du site
 ├── favicons/              # Icônes de l'application
 ├── restaurants/           # Images des restaurants (JPG - webp)
-├── delice.html           # Page du restaurant Le délice des sens
-├── francaise.html        # Page du restaurant À la française
-├── index.html           # Page principale
-├── note.html           # Page du restaurant La note enchantée
-├── palette.html        # Page du restaurant La palette du goût
-├── manifest.json       # Manifest PWA
-├── robots.txt         # Fichier robots.txt
-├── sitemap.xml        # Sitemap XML
-└── README.md          # Documentation
+├── delice.html            # Page du restaurant Le délice des sens
+├── francaise.html         # Page du restaurant À la française
+├── index.html             # Page principale
+├── note.html              # Page du restaurant La note enchantée
+├── palette.html           # Page du restaurant La palette du goût
+├── manifest.json          # Manifest PWA
+├── robots.txt             # Fichier robots.txt
+├── sitemap.xml            # Sitemap XML
+└── README.md              # Documentation
 ```
 
 ## Technologies
@@ -82,20 +82,26 @@ OhMyFood/
 
 ```bash
 git clone https://github.com/Steinshy/OC-OhMyFood.git
-cd OhMyFood
+cd OC-OhMyFood
 ```
 
 ### Utilisation
 
-Ouvrez `index.html` dans votre navigateur. Aucun outil de build requis.
+Ouvrez `index.html` dans votre navigateur. Aucun outil de build requis pour consulter le site.
 
-### Optimisation
+### Développement
 
-Le projet inclut des versions minifiées :
-- **CSS** : Fichiers `.min.css` pour les CSS minifiés
-- **HTML** : Fichiers `.min.html` pour les pages minifiées
+Les outils de qualité de code nécessitent Node.js :
 
-Les versions minifiées sont générées automatiquement pour une performance optimale.
+```bash
+npm install        # Installe les dépendances de développement
+npm run lint       # Lint HTML (html-validate) + CSS (stylelint)
+npm run format     # Formate les fichiers avec Prettier
+npm run build:css  # Régénère les fichiers .min.css (lightningcss)
+```
+
+Après toute modification d'un fichier CSS, exécutez `npm run build:css` pour
+mettre à jour les versions minifiées servies par les pages (vérifié en CI).
 
 ## Restaurants disponibles
 

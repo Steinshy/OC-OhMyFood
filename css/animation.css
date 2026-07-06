@@ -13,72 +13,6 @@
   }
 }
 
-@keyframes cubeLoaderBackground {
-  0%,
-  100% {
-    background-position:
-      0 -50px,
-      100% -50px;
-  }
-
-  15% {
-    background-position:
-      0 50%,
-      100% -25px;
-  }
-
-  30% {
-    background-position:
-      0 100%,
-      100% 50%;
-  }
-
-  40% {
-    background-position:
-      0 100%,
-      100% 100%;
-  }
-
-  50% {
-    background-position:
-      0 100%,
-      100% 100%,
-      0 calc(100% - 8px);
-  }
-
-  60% {
-    background-position:
-      0 100%,
-      100% 100%,
-      0 calc(100% - 16px),
-      100% 0;
-  }
-
-  70% {
-    background-position:
-      0 100%,
-      100% 100%,
-      0 calc(100% - 16px),
-      100% calc(100% - 8px);
-  }
-
-  80% {
-    background-position:
-      0 100%,
-      100% 100%,
-      0 calc(100% - 16px),
-      100% calc(100% - 16px);
-  }
-
-  90% {
-    background-position:
-      0 50%,
-      100% 100%,
-      0 calc(100% - 8px),
-      100% calc(100% - 16px);
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -113,5 +47,18 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Reduced motion: keep end states (loader still hides) but skip the motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

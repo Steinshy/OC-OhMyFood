@@ -4,8 +4,8 @@
   /* Colors */
   --color-primary: #9356dc;
   --color-secondary: #ff79da;
+  --color-tertiary: #99e2d0;
   --color-white: #fff;
-  --color-gray: #ccc;
   --color-text: #000;
   --color-border: #d9d9d9;
   --color-badge: #5fbda5;
@@ -17,15 +17,12 @@
   /* Typography */
   --font-shrikhand: "Shrikhand", sans-serif;
   --font-roboto: "Roboto", sans-serif;
-  --fw-normal: 400;
   --fw-medium: 500;
   --fw-bold: 700;
-  --fs-xs: 0.75rem;
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
   --fs-lg: 1.25rem;
   --fs-xl: 1.5rem;
-  --fs-2xl: 2rem;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -35,7 +32,6 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  --space-4xl: 5rem;
 
   /* Layout */
   --size-50: 50%;
@@ -43,12 +39,8 @@
   --container-max: 768px;
 
   /* Shadows */
-  --shadow-loader: 0 3px 0 var(--color-white);
   --shadow-light: 0 2px 8px rgb(0 0 0 / 20%);
   --shadow-medium: 0 4px 15px rgb(0 0 0 / 20%);
-
-  /* Animation */
-  --gradient: no-repeat linear-gradient(var(--color-gray) 0, var(--color-gray) 100%);
 }
 
 /* Reset */
@@ -62,6 +54,7 @@ html {
   color: var(--color-text);
   font-family: var(--font-roboto);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -70,7 +63,7 @@ body {
 }
 
 main {
-  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s both;
   display: flex;
   flex-direction: column;
 }
@@ -80,23 +73,29 @@ a {
   text-decoration: none;
 }
 
-button {
+.btn {
+  align-items: center;
   background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   border: none;
   border-radius: var(--space-lg);
   box-shadow: var(--shadow-light);
   color: var(--color-white);
   cursor: pointer;
+  display: inline-flex;
   font-size: var(--fs-base);
   font-weight: var(--fw-medium);
   height: 50px;
+  justify-content: center;
   margin: var(--space-xl) 0;
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    opacity 0.3s;
   width: 200px;
 }
 
-button:hover,
-button:focus-visible {
+.btn:hover,
+.btn:focus-visible {
   box-shadow: var(--shadow-medium);
   opacity: 0.8;
   outline: 2px solid var(--color-primary);
@@ -114,38 +113,6 @@ img {
   height: auto;
   max-width: var(--size-100);
   object-fit: cover;
-}
-
-/* Loader */
-.loader_container {
-  align-items: center;
-  animation: hideLoader 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
-  background-color: var(--color-white);
-  display: flex;
-  height: var(--size-100);
-  inset: 0;
-  justify-content: center;
-  position: fixed;
-  width: var(--size-100);
-  z-index: 9999;
-}
-
-.loader {
-  box-shadow: var(--shadow-loader);
-  clip-path: inset(-40px 0 -5px);
-  min-height: 15px;
-  min-width: 100px;
-  position: relative;
-}
-
-.loader::before {
-  animation: cubeLoaderBackground 1.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--gradient), var(--gradient), var(--gradient), var(--gradient);
-  background-size: 16px 14px;
-  content: "";
-  inset: auto calc(50% - 17px) 0;
-  min-height: 50px;
-  position: absolute;
 }
 
 /* Header */
@@ -263,11 +230,6 @@ header {
   background-color: var(--color-background-light);
 }
 
-.restaurants h1 {
-  font-weight: var(--fw-bold);
-  margin-block-end: var(--space-md);
-}
-
 .restaurants_container {
   display: grid;
   padding: var(--space-lg);
@@ -289,7 +251,9 @@ header {
   min-height: 250px;
   overflow: hidden;
   position: relative;
-  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s;
+  transition:
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s;
   width: 100%;
 }
 
@@ -350,7 +314,9 @@ header {
   color: var(--color-white);
   font-size: var(--fs-lg);
   -webkit-text-stroke: 1.5px #000;
-  transition: color 0.3s, -webkit-text-stroke 0.3s;
+  transition:
+    color 0.3s,
+    -webkit-text-stroke 0.3s;
   z-index: 2;
 }
 
