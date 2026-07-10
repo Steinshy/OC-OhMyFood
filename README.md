@@ -3,6 +3,7 @@
 [![HTML5](https://img.shields.io/badge/HTML5-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![PWA](https://img.shields.io/badge/PWA-Progressive%20Web%20App-5A0FC8?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-6.7.2-339AF0?logo=font-awesome&logoColor=white&style=for-the-badge)](https://fontawesome.com/)
 [![Google Fonts](https://img.shields.io/badge/Google%20Fonts-Roboto%20%26%20Shrikhand-4285F4?logo=google-fonts&logoColor=white&style=for-the-badge)](https://fonts.google.com/)
 
 OhMyFood est une application web responsive qui permet aux clients de composer leur menu gastronomique à l'avance et de réduire leur temps d'attente dans les restaurants partenaires.
@@ -40,7 +41,7 @@ OC-OhMyFood/
 
 - **HTML5** - Structure sémantique et accessible
 - **CSS3** - Animations et responsive design
-- **Icônes SVG inline** - Font Awesome Free ([CC BY 4.0](https://fontawesome.com/license/free)), sans requête CDN
+- **Font Awesome 6.7.2** - Icônes vectorielles
 - **Google Fonts** - Roboto & Shrikhand avec display=swap
 - **PWA** - Progressive Web App ready
 
