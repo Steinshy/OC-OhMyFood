@@ -145,7 +145,7 @@ a {
   transform: translateY(-2px);
 }
 
-.scroll-to-top .icon {
+.scroll-to-top i {
   font-size: 1.5rem;
 }
 
@@ -159,14 +159,6 @@ img {
   height: auto;
   max-width: var(--size-100);
   object-fit: cover;
-}
-
-/* Inline SVG icons (Font Awesome Free, CC BY 4.0) */
-.icon {
-  fill: currentcolor;
-  height: 1em;
-  vertical-align: -0.125em;
-  width: auto;
 }
 
 /* Header */
@@ -184,7 +176,7 @@ header {
   position: absolute;
 }
 
-.header_nav a .icon {
+.header_nav a i {
   font-size: var(--fs-xl);
 }
 
@@ -200,7 +192,7 @@ header {
   width: var(--size-100);
 }
 
-.main_banner_location .icon {
+.main_banner_location i {
   font-size: var(--fs-lg);
   margin-inline-end: var(--space-md);
 }
@@ -275,7 +267,7 @@ header {
   font-weight: var(--fw-medium);
 }
 
-.booking_orders_container .booking_card:last-child .icon {
+.booking_orders_container .booking_card:last-child i {
   color: var(--color-primary);
 }
 
@@ -367,18 +359,17 @@ header {
 .custom_heart {
   color: var(--color-white);
   font-size: var(--fs-lg);
-  stroke: var(--color-text);
-  stroke-width: 38px;
+  -webkit-text-stroke: 1.5px #000;
   transition:
     color 0.3s,
-    stroke 0.3s;
+    -webkit-text-stroke 0.3s;
   z-index: 2;
 }
 
 .custom_heart:hover,
 .custom_heart:focus-visible {
   color: var(--color-primary);
-  stroke: transparent;
+  -webkit-text-stroke: transparent;
 }
 
 /* Footer */
@@ -422,7 +413,7 @@ footer .footer_links a {
   gap: var(--space-sm);
 }
 
-footer .footer_links .icon {
+footer .footer_links i {
   font-size: var(--fs-base);
 }
 
