@@ -1,5 +1,6 @@
 {
   "name": "ohmyfood",
+  "packageManager": "pnpm@10.33.0",
   "version": "1.0.0",
   "description": "OhMyFood - Restaurants gastronomiques",
   "private": true,
