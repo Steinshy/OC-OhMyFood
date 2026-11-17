@@ -44,7 +44,7 @@
 }
 
 /* Reset */
-:where(*, *::before, *::after) {
+:where(*) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
