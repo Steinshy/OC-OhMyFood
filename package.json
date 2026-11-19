@@ -5,7 +5,7 @@
   "description": "OhMyFood - Restaurants gastronomiques",
   "private": true,
   "scripts": {
-    "lint": "npm run lint:html && npm run lint:css",
+    "lint": "pnpm run lint:html && pnpm run lint:css",
     "lint:html": "html-validate '**/*.html'",
     "lint:css": "stylelint '**/*.css' --ignore-pattern '**/*.min.css'",
     "build:css": "for f in style loader animation restaurants; do lightningcss --minify css/$f.css -o css/$f.min.css; done",
